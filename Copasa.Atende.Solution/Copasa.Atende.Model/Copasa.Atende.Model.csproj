@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0FF5837E-7EF6-4B40-98C6-A62DE6E0C215}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Copasa.Atende.Model</RootNamespace>
+    <AssemblyName>Copasa.Atende.Model</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Copasa.App.Model.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homologacao|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Homologacao\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Copasa.App.Model.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|AnyCPU'">
+    <OutputPath>bin\Hml\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\Prd\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tmt|AnyCPU'">
+    <OutputPath>bin\Tmt\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Copasa.Util, Version=1.3.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Copasa.Util.1.6.0\lib\Copasa.Util.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.9.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.Helpers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.20710.0\lib\net40\System.Web.Mvc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.20710.0\lib\net40\System.Web.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.20710.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Core\Dyn365DisplayBindAttribute.cs" />
+    <Compile Include="Core\Dyn365IdCopasaAttribute.cs" />
+    <Compile Include="Core\Dyn365KeyBindAttribute.cs" />
+    <Compile Include="Dyn365ProtocoloURAReceive.cs" />
+    <Compile Include="Dyn365ProtocoloURASend.cs" />
+    <Compile Include="Dyn365\Localidade\DLocalidadeNomeSend.cs" />
+    <Compile Include="URAHistoricoProtocoloDetalheReceive.cs" />
+    <Compile Include="URAHistoricoProtocoloDetalheSend.cs" />
+    <Compile Include="URAHistoricoProtocoloReceive.cs" />
+    <Compile Include="Digital\ParametroModel.cs" />
+    <Compile Include="Digital\ClienteModel.cs" />
+    <Compile Include="Digital\TelaModel.cs" />
+    <Compile Include="Digital\TelaTituloModel.cs" />
+    <Compile Include="Digital\TituloModel.cs" />
+    <Compile Include="Dyn365AgenciaFisica.cs" />
+    <Compile Include="Broker\UsuarioCopasaModel.cs" />
+    <Compile Include="Broker\UsuarioCopasaReceive.cs" />
+    <Compile Include="Core\Dyn365IdAttribute.cs" />
+    <Compile Include="Core\Dyn365BindAttribute.cs" />
+    <Compile Include="Core\Dyn365NameAttribute.cs" />
+    <Compile Include="Dyn365AssociateIdentifierXUserSend.cs" />
+    <Compile Include="Dyn365Bind.cs" />
+    <Compile Include="Dyn365ChangeControllerIdentifierStatusSend.cs" />
+    <Compile Include="Dyn365ChangeUserPasswordCPFSend.cs" />
+    <Compile Include="Dyn365EscritorioLocal.cs" />
+    <Compile Include="Dyn365Localidade.cs" />
+    <Compile Include="Dyn365ProtocoloHistoricoDetalhe.cs" />
+    <Compile Include="Dyn365ProtocoloDetalhe.cs" />
+    <Compile Include="Dyn365ProtocoloApp.cs" />
+    <Compile Include="Dyn365ProtocoloEncerrado.cs" />
+    <Compile Include="Dyn365ProtocoloEncerradoResolucao.cs" />
+    <Compile Include="Dyn365Superintendencia.cs" />
+    <Compile Include="Dyn365Unidade.cs" />
+    <Compile Include="Dyn365\DComentario.cs" />
+    <Compile Include="Dyn365\DComentariosReceive.cs" />
+    <Compile Include="Dyn365\DHistoricoServicoReceiveDetalhe.cs" />
+    <Compile Include="Dyn365\DHistoricoServicoReceiveApp.cs" />
+    <Compile Include="Dyn365\DListaSolicitacaoServicoDynReceive.cs" />
+    <Compile Include="Dyn365\DConfirmaEmailSend.cs" />
+    <Compile Include="Dyn365\DConsultaUsuarioReceive.cs" />
+    <Compile Include="Dyn365\DContasEmailSend.cs" />
+    <Compile Include="Dyn365\DConsultaAssocIdentReceive.cs" />
+    <Compile Include="Dyn365\DDesassociaIdentificadorSend.cs" />
+    <Compile Include="Dyn365\DEnviaFaturaEmailSend.cs" />
+    <Compile Include="Dyn365\DHistoricoConsumoBarra.cs" />
+    <Compile Include="Dyn365\DListaSolicitacaoServicoDynSend.cs" />
+    <Compile Include="Dyn365\DListaStatusFaturaSend.cs" />
+    <Compile Include="Dyn365\DMensagemRetornoReceive.cs" />
+    <Compile Include="Dyn365\DImagemVazamentoSend.cs" />
+    <Compile Include="Dyn365\DUltimasFaturasReceive.cs" />
+    <Compile Include="Dyn365\DListaStatusFaturaEmailReceive.cs" />
+    <Compile Include="Dyn365\Localidade\DEnderecoReceive.cs" />
+    <Compile Include="Dyn365\Localidade\DEnderecoSend.cs" />
+    <Compile Include="Dyn365\Localidade\DPavimentacaoReceive.cs" />
+    <Compile Include="Dyn365\Localidade\DPavimentacaoSend.cs" />
+    <Compile Include="Dyn365\Protocolo\DAgenciaReceive.cs" />
+    <Compile Include="Dyn365\DAssociaIdentificadorReceive.cs" />
+    <Compile Include="Dyn365\DAssociaIdentificadorSend.cs" />
+    <Compile Include="Dyn365\Protocolo\DAtualizaProtocolo.cs" />
+    <Compile Include="Dyn365\Protocolo\DAtualizaProtocoloSend.cs" />
+    <Compile Include="Dyn365\Localidade\DBairroReceive.cs" />
+    <Compile Include="Dyn365\Localidade\DBairroSend.cs" />
+    <Compile Include="Dyn365\DCadastraIdentificador.cs" />
+    <Compile Include="Dyn365\DCadastraUsuarioSend.cs" />
+    <Compile Include="Dyn365\DCertidaoNegativaSend.cs" />
+    <Compile Include="Dyn365\Protocolo\DConsultaProtocoloReceive.cs" />
+    <Compile Include="Dyn365\Protocolo\DCriaProtocolo.cs" />
+    <Compile Include="Dyn365\Protocolo\DCriaProtocoloReceive.cs" />
+    <Compile Include="Dyn365\Protocolo\DCriaProtocoloSend.cs" />
+    <Compile Include="Dyn365\DFaturasSend.cs" />
+    <Compile Include="Dyn365\DListaIdentificadorReceive.cs" />
+    <Compile Include="Dyn365\DListaIdentificadorSend.cs" />
+    <Compile Include="Dyn365\DListaUsuarioReceive.cs" />
+    <Compile Include="Dyn365\DListaUsuarioSend.cs" />
+    <Compile Include="Dyn365OrdemServico.cs" />
+    <Compile Include="Dyn365Protocolo.cs" />
+    <Compile Include="Dyn365User.cs" />
+    <Compile Include="Dyn365\Localidade\DLocalidadeSend.cs" />
+    <Compile Include="Dyn365\Localidade\DLogradouroSend.cs" />
+    <Compile Include="Dyn365\Localidade\DLogradouroReceive.cs" />
+    <Compile Include="Dyn365\DHistoricoServicoReceive.cs" />
+    <Compile Include="Dyn365\Protocolo\DServicoReceive.cs" />
+    <Compile Include="Dyn365\DValidaCpfCnpjReceive.cs" />
+    <Compile Include="Dyn365\DValidaCpfCnpjSend.cs" />
+    <Compile Include="Dyn365\DValidaIdentificadorReceive.cs" />
+    <Compile Include="Dyn365ValidaIdentificadorSend.cs" />
+    <Compile Include="Dyn365\DConsultaIdentificador.cs" />
+    <Compile Include="Dyn365\DConsultaIdentificadorReceive.cs" />
+    <Compile Include="Dyn365\DConsultaIdentificadorSend.cs" />
+    <Compile Include="Dyn365\Localidade\DLocalidadeReceive.cs" />
+    <Compile Include="Dyn365\DSolicitaServicoSend.cs" />
+    <Compile Include="Dyn365\Protocolo\GeraProtocolo.cs" />
+    <Compile Include="Dyn365\VerificaFaltaDaguaSend.cs" />
+    <Compile Include="Core\ISAttribute.cs" />
+    <Compile Include="ORACargo.cs" />
+    <Compile Include="ORAEmpregado.cs" />
+    <Compile Include="ORAUnidadeOrganizacional.cs" />
+    <Compile Include="SCN4CREXReceive.cs" />
+    <Compile Include="SCN4CREXSend.cs" />
+    <Compile Include="SCN4CRSSReceiveOS.cs" />
+    <Compile Include="SCN4CRUNReceive.cs" />
+    <Compile Include="SCN4CRUNSend.cs" />
+    <Compile Include="SCN4ISACReceive.cs" />
+    <Compile Include="SCN4ISACSend.cs" />
+    <Compile Include="SCN4ISAEReceive.cs" />
+    <Compile Include="SCN4ISAESend.cs" />
+    <Compile Include="SCN4ISCSReceive.cs" />
+    <Compile Include="SCN4ISCSSend.cs" />
+    <Compile Include="Dyn365UpdatePortalUserSend.cs" />
+    <Compile Include="Dyn365RecoveryUserPasswordSend.cs" />
+    <Compile Include="Dyn365ChangeUserPasswordSend.cs" />
+    <Compile Include="Core\BaseModelReceiveTeste.cs" />
+    <Compile Include="Core\BaseModelReceive.cs" />
+    <Compile Include="Core\BaseModelRetorno.cs" />
+    <Compile Include="Core\BaseModelSend.cs" />
+    <Compile Include="Core\Body.cs" />
+    <Compile Include="Core\Envelope.cs" />
+    <Compile Include="Core\BaseMessage.cs" />
+    <Compile Include="Core\BaseModel.cs" />
+    <Compile Include="Core\BaseResponse.cs" />
+    <Compile Include="Core\BrokerAttribute.cs" />
+    <Compile Include="Core\BaseModelAzureCopaUserReceive.cs" />
+    <Compile Include="Dyn365AuthenticateUserSend.cs" />
+    <Compile Include="Dyn365CreatePortalUserSend.cs" />
+    <Compile Include="SCN4ISU1ReceiveUsuariosNome.cs" />
+    <Compile Include="SCN4ISU1_IdentificadoresReceive.cs" />
+    <Compile Include="SCN4ISU1_IdentificadoresSend.cs" />
+    <Compile Include="SCN4ISU1_NomesReceive.cs" />
+    <Compile Include="SCN4ISU1_NomesSend.cs" />
+    <Compile Include="SCN6ISAVReceive.cs" />
+    <Compile Include="SCN6ISAVSend.cs" />
+    <Compile Include="SCN6ISCBReceive.cs" />
+    <Compile Include="SCN6ISCBSend.cs" />
+    <Compile Include="SCN6ISCCReceive.cs" />
+    <Compile Include="SCN6ISCCSend.cs" />
+    <Compile Include="SCN6ISCFReceive.cs" />
+    <Compile Include="SCN6ISCFSend.cs" />
+    <Compile Include="SCN6ISDLReceive.cs" />
+    <Compile Include="SCN6ISDLReceiveDado.cs" />
+    <Compile Include="SCN6ISDLSend.cs" />
+    <Compile Include="Dyn365SomenteMensagem.cs" />
+    <Compile Include="SCN6ISGPReceive.cs" />
+    <Compile Include="SCN6ISGPSend.cs" />
+    <Compile Include="SCN6ISGPSendFaturas.cs" />
+    <Compile Include="SCN6ISNFReceive.cs" />
+    <Compile Include="SCN6ISNFReceiveNotaFiscal.cs" />
+    <Compile Include="SCN6ISNFSend.cs" />
+    <Compile Include="SCN6ISPDReceive.cs" />
+    <Compile Include="SCN6ISPDReceiveFatura.cs" />
+    <Compile Include="SCN6ISPDReceiveParcelas.cs" />
+    <Compile Include="SCN6ISPDSend.cs" />
+    <Compile Include="SCN6ISQAReceive.cs" />
+    <Compile Include="SCN6ISQAReceiveFaturaEmDebito.cs" />
+    <Compile Include="SCN6ISQASend.cs" />
+    <Compile Include="SCN6ISTPReceive.cs" />
+    <Compile Include="SCN6ISTPSend.cs" />
+    <Compile Include="SCN7ISOPReceive.cs" />
+    <Compile Include="SCN7ISOPReceiveLocal.cs" />
+    <Compile Include="SCN7ISOPSend.cs" />
+    <Compile Include="SCNISPS1Receive.cs" />
+    <Compile Include="SCNISPS1ReceiveHidrometro.cs" />
+    <Compile Include="SCNISPS1Send.cs" />
+    <Compile Include="TrabListaDadosHidrometro.cs" />
+    <Compile Include="TrabMensagemCorrespondenciaSicomOracle.cs" />
+    <Compile Include="TrabUsuario.cs" />
+    <Compile Include="TrabParametroReceive.cs" />
+    <Compile Include="TrabValidaUsuarioReceive.cs" />
+    <Compile Include="Dyn365\DCadastraIdentificadorSend.cs" />
+    <Compile Include="TrabParametroSend.cs" />
+    <Compile Include="TrabValidaUsuarioSend.cs" />
+    <Compile Include="SCN4CASSReceive.cs" />
+    <Compile Include="SCN4CASSSend.cs" />
+    <Compile Include="SCN4ISCPReceive.cs" />
+    <Compile Include="SCN4ISCPReceiveParcelamento.cs" />
+    <Compile Include="SCN4ISCPSend.cs" />
+    <Compile Include="SCN4ISREReceive.cs" />
+    <Compile Include="SCN4ISRESend.cs" />
+    <Compile Include="SCN4ISRESendContas.cs" />
+    <Compile Include="SCN4ISRESendParcelamento.cs" />
+    <Compile Include="SCN4ISRLReceive.cs" />
+    <Compile Include="SCN6ISAAReceive.cs" />
+    <Compile Include="SCN6ISAAReceiveAgencia.cs" />
+    <Compile Include="SCN6ISAAReceiveAgenciaSicom.cs" />
+    <Compile Include="SCN6ISAASend.cs" />
+    <Compile Include="SCN6ISCNReceiveFinanciamento.cs" />
+    <Compile Include="SCN6ISCNReceiveLancamento.cs" />
+    <Compile Include="SCN6ISCNReceiveParcelamento.cs" />
+    <Compile Include="SCN6ISCNView.cs" />
+    <Compile Include="SCN6ISCNViewDebito.cs" />
+    <Compile Include="SCN6ISCNViewEnderecoIdentificador.cs" />
+    <Compile Include="SCN6ISCNViewIdentificador.cs" />
+    <Compile Include="TrabBuscaReligacaoReceive.cs" />
+    <Compile Include="TrabBuscaReligacaoSend.cs" />
+    <Compile Include="TrabCertidaoNegativaDebitoReceive.cs" />
+    <Compile Include="TrabDynamicsSend.cs" />
+    <Compile Include="TrabEmissaoFaturaSend.cs" />
+    <Compile Include="Enumerador\Enumerador.cs" />
+    <Compile Include="TrabInterrupcaoCopagis.cs" />
+    <Compile Include="ORAMensagem.cs" />
+    <Compile Include="SCN3ISMTReceive.cs" />
+    <Compile Include="SCN3ISMTReceiveMatricula.cs" />
+    <Compile Include="SCN3ISMTSend.cs" />
+    <Compile Include="SCN3ISPSReceive.cs" />
+    <Compile Include="SCN3ISPSReceiveDeducaoEsgoto.cs" />
+    <Compile Include="SCN3ISPSReceiveFonteAlternativa.cs" />
+    <Compile Include="SCN3ISPSReceiveMedicaoEsgoto.cs" />
+    <Compile Include="SCN3ISPSReceivePSAgua.cs" />
+    <Compile Include="SCN3ISPSReceivePSEsgoto.cs" />
+    <Compile Include="SCN3ISPSSend.cs" />
+    <Compile Include="SCN3PCLIReceiveIdentificadorUnico.cs" />
+    <Compile Include="SCN3PCLIMatriculaReceive.cs" />
+    <Compile Include="SCN3PCLIMatriculaReceiveMatricula.cs" />
+    <Compile Include="SCN4CRALReceive.cs" />
+    <Compile Include="SCN4CRATReceive.cs" />
+    <Compile Include="SCN4CRATReceiveServicos.cs" />
+    <Compile Include="SCN4CRBXReceiveServicos.cs" />
+    <Compile Include="SCN4CRALSend.cs" />
+    <Compile Include="SCN4CRBXReceive.cs" />
+    <Compile Include="SCN4CRSSReceive.cs" />
+    <Compile Include="SCN4CRSSSend.cs" />
+    <Compile Include="SCN4ISORReceive.cs" />
+    <Compile Include="SCN4ISORReceiveOrdemServico.cs" />
+    <Compile Include="SCN4ISORSend.cs" />
+    <Compile Include="SCN4ISSSReceive.cs" />
+    <Compile Include="SCN4ISSSReceiveSolicitacaoServico.cs" />
+    <Compile Include="SCN4ISSSSend.cs" />
+    <Compile Include="SCN4ISU1Receive.cs" />
+    <Compile Include="SCN4ISU1ReceiveMatriculas.cs" />
+    <Compile Include="SCN4ISU1ReceiveMatriculasUsuarios.cs" />
+    <Compile Include="SCN4ISU1ReceiveUsuarios.cs" />
+    <Compile Include="SCN4ISU1Send.cs" />
+    <Compile Include="SCN4ISU1SendIdentificadores.cs" />
+    <Compile Include="SCN5ISHCReceive.cs" />
+    <Compile Include="SCN5ISHCReceiveDados.cs" />
+    <Compile Include="SCN5ISHCSend.cs" />
+    <Compile Include="SCN6EFEMReceive.cs" />
+    <Compile Include="SCN6EFEMSend.cs" />
+    <Compile Include="SCN6ISCEReceive.cs" />
+    <Compile Include="SCN6ISCESend.cs" />
+    <Compile Include="SCN6ISCESendMatricula.cs" />
+    <Compile Include="SCN6ISCNReceive.cs" />
+    <Compile Include="SCN6ISCNReceiveMatriculas.cs" />
+    <Compile Include="SCN6ISCNSend.cs" />
+    <Compile Include="SCN6ISDFReceive.cs" />
+    <Compile Include="SCN6ISDFReceiveHidrometro.cs" />
+    <Compile Include="SCN6ISDFSend.cs" />
+    <Compile Include="SCN6ISFDReceive.cs" />
+    <Compile Include="SCN6ISFDReceiveFaturas.cs" />
+    <Compile Include="SCN6ISFDSend.cs" />
+    <Compile Include="SCN6ISFPReceive.cs" />
+    <Compile Include="SCN6ISFPReceiveContas.cs" />
+    <Compile Include="SCN6ISFPSend.cs" />
+    <Compile Include="SCN6ISSVReceive.cs" />
+    <Compile Include="SCN6ISSVSend.cs" />
+    <Compile Include="SCN6UEFIReceiveMatriculas.cs" />
+    <Compile Include="SCN6UEFISend.cs" />
+    <Compile Include="MPToken.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SCN3PCLIReceive.cs" />
+    <Compile Include="SCN3PCLIReceiveIdentificador.cs" />
+    <Compile Include="SCN3PCLISend.cs" />
+    <Compile Include="SCN4ISFAReceive.cs" />
+    <Compile Include="SCN4ISFASend.cs" />
+    <Compile Include="SCN4ISRLSend.cs" />
+    <Compile Include="SCN4ISVIReceive.cs" />
+    <Compile Include="SCN4ISVISend.cs" />
+    <Compile Include="SCN4ISVRReceive.cs" />
+    <Compile Include="SCN4ISVRSend.cs" />
+    <Compile Include="SCN5IS01Receive.cs" />
+    <Compile Include="SCN5IS01ReceiveTabelas.cs" />
+    <Compile Include="SCN5IS01Send.cs" />
+    <Compile Include="SCN5IS02Receive.cs" />
+    <Compile Include="SCN5IS02Send.cs" />
+    <Compile Include="SCN5IS02SendTabelas.cs" />
+    <Compile Include="SCN5IS03Receive.cs" />
+    <Compile Include="SCN5IS03Send.cs" />
+    <Compile Include="SCN6UEFIReceive.cs" />
+    <Compile Include="TrabPesquisaFaltaAguaReceive.cs" />
+    <Compile Include="TrabSituacaoMatriculaReceiveMatriculas.cs" />
+    <Compile Include="TrabPesquisaFaltaAguaSend.cs" />
+    <Compile Include="StatusRetornoIS.cs" />
+    <Compile Include="TrabValidaCNPJReceive.cs" />
+    <Compile Include="TrabValidaCNPJSend.cs" />
+    <Compile Include="URAHistoricoProtocoloReceiveProtocolo.cs" />
+    <Compile Include="URAHistoricoProtocoloSend.cs" />
+    <Compile Include="URAIdentificadorListaSend.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Copasa.Atende.DTO\Copasa.Atende.DTO.csproj">
+      <Project>{5F777CFE-44C0-4EA5-86D0-C8ABB02E0423}</Project>
+      <Name>Copasa.Atende.DTO</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

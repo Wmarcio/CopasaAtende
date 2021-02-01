@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width" />
+    <title>NOME DO SISTEMA - @ViewBag.Title</title>
+
+    @Styles.Render("~/bundles/bootstrap/css")
+    @Styles.Render("~/bundles/Admin/css")
+    @Styles.Render("~/bundles/Copasa/css")
+</head>
+<body class="hold-transition skin-blue layout-top-nav">
+
+    <div class="wrapper">
+        <!-- Main Header and Menu -->
+        @Html.Partial("_Header")
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <div class="container container-body">
+
+                <section class="content">
+                    @RenderBody()
+                </section>
+            </div>
+        </div>
+
+        <footer class="main-footer navbar-static-bottom">
+            <div class="container">
+                <div class="col-sm-1">
+                    <img src="~/Imagens/logo-principal.fw.png" width="80px" height="50px" />
+                </div>
+
+                <div class="col-sm-6">
+                    <h5>
+                        NOME DO SISTEMA<br />
+                    </h5>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap/js")
+    @Scripts.Render("~/bundles/app/js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

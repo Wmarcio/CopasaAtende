@@ -1,0 +1,27 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>COPASA Atende - @ViewBag.Title</title>
+
+    <link href="~/Content/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body style="font-size: 16px !important">
+
+    <div class="container">
+
+        @RenderBody()
+
+    </div>
+    
+    @*@Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap/js")
+    @Scripts.Render("~/bundles/app/js")
+    @Scripts.Render("~/bundles/BaseFrontController/js")*@
+</body>
+</html>

@@ -1,0 +1,2420 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Copasa.Atende.WebService</name>
+    </assembly>
+    <members>
+        <member name="T:Copasa.Atende.WebService.BundleConfig">
+            <summary>
+            Classe BundleConfig.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.BundleConfig.RegisterBundles(System.Web.Optimization.BundleCollection)">
+            <summary>
+            RegisterBundles
+            </summary>
+            <param name="bundles">BundleCollection</param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.FilterConfig">
+            <summary>
+            Classe FilterConfig.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.FilterConfig.RegisterGlobalFilters(System.Web.Mvc.GlobalFilterCollection)">
+            <summary>
+            RegisterGlobalFilters
+            </summary>
+            <param name="filters">GlobalFilterCollection</param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.IocConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.IocConfig.ConfigurarDependencias">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.NinjectDependencyResolver">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.NinjectDependencyResolver.#ctor(Ninject.Syntax.IResolutionRoot)">
+            <summary>
+            
+            </summary>
+            <param name="kernel"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.NinjectDependencyResolver.GetService(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.NinjectDependencyResolver.GetServices(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="serviceType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.SimpleInjectorInitializer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.SimpleInjectorInitializer.GetContainer">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.Startup">
+            <summary>
+            Inicio
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.Startup.Configuration(Owin.IAppBuilder)">
+            <summary>
+            Configuracoes: For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=316888
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.Startup.AtivarGeracaoTokenAcesso(Owin.IAppBuilder)">
+            <summary>
+            Ativa a geracao de token de acesso.
+            </summary>
+            <param name="app"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.SwaggerConfig">
+            <summary>
+            Configuracao do Swagger
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.SwaggerConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.SwaggerConfig.GetRootUrl(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Monta a root url
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.SwaggerConfig.GetXmlCommentsPath">
+            <summary>
+            GetXmlCommentsPath
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.App_Start.AuthTokenDocumentFilter">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.App_Start.AuthTokenDocumentFilter.Apply(Swashbuckle.Swagger.SwaggerDocument,Swashbuckle.Swagger.SchemaRegistry,System.Web.Http.Description.IApiExplorer)">
+            <summary>
+            Documentacao da autenticação via token
+            </summary>
+            <param name="swaggerDoc"></param>
+            <param name="schemaRegistry"></param>
+            <param name="apiExplorer"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.RouteConfig">
+            <summary>
+            Classe RouteConfig.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.RouteConfig.RegisterRoutes(System.Web.Routing.RouteCollection)">
+            <summary>
+            RegisterRoutes
+            </summary>
+            <param name="routes">RouteCollection</param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.WebApiConfig">
+            <summary>
+             Web Api Config
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.WebApiConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Método Register.
+            </summary>
+            <param name="config">HttpConfiguration</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.WebApiConfig.RootUrlResolver(System.Net.Http.HttpRequestMessage)">
+            <summary>
+            Resolve a root url
+            </summary>
+            <param name="request"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ApiDescriptionExtensions">
+            <summary>
+            Classe ApiDescriptionExtensions.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ApiDescriptionExtensions.GetFriendlyId(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Generates an URI-friendly ID for the <see cref="T:System.Web.Http.Description.ApiDescription"/>. E.g. "Get-Values-id_name" instead of "GetValues/{id}?name={name}"
+            </summary>
+            <param name="description">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The ID as a string.</returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfig">
+            <summary>
+            Use this class to customize the Help Page.
+            For example you can set a custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> to supply the documentation
+            or you can provide the samples for the requests/responses.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfig.Register(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Register.
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController">
+            <summary>
+            The controller that will handle requests for the help page.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController.#ctor">
+            <summary>
+            Construtor.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController.Configuration">
+            <summary>
+            Configuration
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController.Index">
+            <summary>
+            Index
+            </summary>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController.Api(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="apiId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.Controllers.HelpController.ResourceModel(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="modelName"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageAreaRegistration">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageAreaRegistration.AreaName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageAreaRegistration.RegisterArea(System.Web.Mvc.AreaRegistrationContext)">
+            <summary>
+            
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetDocumentationProvider(System.Web.Http.HttpConfiguration,System.Web.Http.Description.IDocumentationProvider)">
+            <summary>
+            Sets the documentation provider for help page.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="documentationProvider">The documentation provider.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleObjects(System.Web.Http.HttpConfiguration,System.Collections.Generic.IDictionary{System.Type,System.Object})">
+            <summary>
+            Sets the objects that will be used by the formatters to produce sample requests/responses.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleObjects">The sample objects.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type and action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleRequest(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample request directly for the specified media type and action with parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample request.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String)">
+            <summary>
+            Sets the sample request directly for the specified media type of the action.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleResponse(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.String,System.String,System.String[])">
+            <summary>
+            Sets the sample response directly for the specified media type of the action with specific parameters.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample response.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForMediaType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Sets the sample directly for all actions with the specified media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetSampleForType(System.Web.Http.HttpConfiguration,System.Object,System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Sets the sample directly for all actions with the specified type and media type.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sample">The sample.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The parameter type or return type of an action.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualRequestType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate request samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String)">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetActualResponseType(System.Web.Http.HttpConfiguration,System.Type,System.String,System.String,System.String[])">
+            <summary>
+            Specifies the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> returned as part of the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            The help page will use this information to produce more accurate response samples.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="type">The type.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <returns>The help page sample generator.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.SetHelpPageSampleGenerator(System.Web.Http.HttpConfiguration,Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator)">
+            <summary>
+            Sets the help page sample generator.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="sampleGenerator">The help page sample generator.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.GetModelDescriptionGenerator(System.Web.Http.HttpConfiguration)">
+            <summary>
+            Gets the model description generator.
+            </summary>
+            <param name="config">The configuration.</param>
+            <returns>The <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator"/></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageConfigurationExtensions.GetHelpPageApiModel(System.Web.Http.HttpConfiguration,System.String)">
+            <summary>
+            Gets the model that represents an API displayed on the help page. The model is initialized on the first call and cached for subsequent calls.
+            </summary>
+            <param name="config">The <see cref="T:System.Web.Http.HttpConfiguration"/>.</param>
+            <param name="apiDescriptionId">The <see cref="T:System.Web.Http.Description.ApiDescription"/> ID.</param>
+            <returns>
+            An <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel"/>
+            </returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.CollectionModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.CollectionModelDescription.ElementDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ComplexTypeModelDescription.Properties">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.DictionaryModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumTypeModelDescription.Values">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumValueDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.EnumValueDescription.Value">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.IModelDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.KeyModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.KeyValuePairModelDescription.ValueModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription">
+            <summary>
+            Describes a type model.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription.ModelType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator">
+            <summary>
+            Generates model descriptions for given types.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.#ctor(System.Web.Http.HttpConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="config"></param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GeneratedModels">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescriptionGenerator.GetOrCreateModelDescription(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="modelType"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelNameAttribute">
+            <summary>
+            Use this attribute to change the name of the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> generated for a type.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="name"></param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelNameAttribute.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterAnnotation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.AnnotationAttribute">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterAnnotation.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription.Annotations">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription.Documentation">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription.TypeDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.SimpleTypeModelDescription">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel">
+            <summary>
+            The model that represents an API displayed on the help page.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel"/> class.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription">
+            <summary>
+            Gets or sets the <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.ApiDescription"/> that describes the API.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.UriParameters">
+            <summary>
+            Gets or sets the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ParameterDescription"/> collection that describes the URI parameters for the API.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.RequestDocumentation">
+            <summary>
+            Gets or sets the documentation for the request.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.RequestModelDescription">
+            <summary>
+            Gets or sets the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the request body.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.RequestBodyParameters">
+            <summary>
+            Gets the request body parameter descriptions.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.ResourceDescription">
+            <summary>
+            Gets or sets the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ModelDescriptions.ModelDescription"/> that describes the resource.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.ResourceProperties">
+            <summary>
+            Gets the resource property descriptions.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.SampleRequests">
+            <summary>
+            Gets the sample requests associated with the API.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.SampleResponses">
+            <summary>
+            Gets the sample responses associated with the API.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.Models.HelpPageApiModel.ErrorMessages">
+            <summary>
+            Gets the error messages associated with this model.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator">
+            <summary>
+            This class will generate the samples for the help page.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator"/> class.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.ActualHttpMessageTypes">
+            <summary>
+            Gets CLR types that are used as the content of <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/>.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples">
+            <summary>
+            Gets the objects that are used directly as samples for certain actions.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects">
+            <summary>
+            Gets the objects that are serialized as samples by the supported formatters.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories">
+            <summary>
+            Gets factories for the objects that the supported formatters will serialize as samples. Processed in order,
+            stopping when the factory successfully returns a non-<see langref="null"/> object.
+            </summary>
+            <remarks>
+            Collection includes just <see cref="M:Copasa.Atende.WebService.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)"/> initially. Use
+            <code>SampleObjectFactories.Insert(0, func)</code> to provide an override and
+            <code>SampleObjectFactories.Add(func)</code> to provide a fallback.</remarks>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleRequests(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the request body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleResponses(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Gets the response body samples for a given <see cref="T:System.Web.Http.Description.ApiDescription"/>.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.GetSample(System.Web.Http.Description.ApiDescription,Copasa.Atende.WebService.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Gets the request or response body samples.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The samples keyed by media type.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.GetActionSample(System.String,System.String,System.Collections.Generic.IEnumerable{System.String},System.Type,System.Net.Http.Formatting.MediaTypeFormatter,System.Net.Http.Headers.MediaTypeHeaderValue,Copasa.Atende.WebService.Areas.HelpPage.SampleDirection)">
+            <summary>
+            Search for samples that are provided directly through <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.ActionSamples"/>.
+            </summary>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="type">The CLR type.</param>
+            <param name="formatter">The formatter.</param>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or for a response.</param>
+            <returns>The sample that matches the parameters.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.GetSampleObject(System.Type)">
+            <summary>
+            Gets the sample object that will be serialized by the formatters. 
+            First, it will look at the <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjects"/>. If no sample object is found, it will try to create
+            one using <see cref="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.DefaultSampleObjectFactory(Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator,System.Type)"/> (which wraps an <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ObjectGenerator"/>) and other
+            factories in <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.SampleObjectFactories"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>The sample object.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.ResolveHttpRequestMessageType(System.Web.Http.Description.ApiDescription)">
+            <summary>
+            Resolves the actual type of <see cref="T:System.Net.Http.ObjectContent`1"/> passed to the <see cref="T:System.Net.Http.HttpRequestMessage"/> in an action.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <returns>The type.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.ResolveType(System.Web.Http.Description.ApiDescription,System.String,System.String,System.Collections.Generic.IEnumerable{System.String},Copasa.Atende.WebService.Areas.HelpPage.SampleDirection,System.Collections.ObjectModel.Collection{System.Net.Http.Formatting.MediaTypeFormatter}@)">
+            <summary>
+            Resolves the type of the action parameter or return value when <see cref="T:System.Net.Http.HttpRequestMessage"/> or <see cref="T:System.Net.Http.HttpResponseMessage"/> is used.
+            </summary>
+            <param name="api">The <see cref="T:System.Web.Http.Description.ApiDescription"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+            <param name="sampleDirection">The value indicating whether the sample is for a request or a response.</param>
+            <param name="formatters">The formatters.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleGenerator.WriteSampleObjectUsingFormatter(System.Net.Http.Formatting.MediaTypeFormatter,System.Object,System.Type,System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Writes the sample object using formatter.
+            </summary>
+            <param name="formatter">The formatter.</param>
+            <param name="value">The value.</param>
+            <param name="type">The type.</param>
+            <param name="mediaType">Type of the media.</param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey">
+            <summary>
+            This is used to identify the place where the sample should be applied.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue)">
+            <summary>
+            Creates a new <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey"/> based on media type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,System.Type)">
+            <summary>
+            Creates a new <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey"/> based on media type and CLR type.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="type">The CLR type.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.#ctor(Copasa.Atende.WebService.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey"/> based on <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="sampleDirection">The <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.#ctor(System.Net.Http.Headers.MediaTypeHeaderValue,Copasa.Atende.WebService.Areas.HelpPage.SampleDirection,System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Creates a new <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey"/> based on media type, <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>, controller name, action name and parameter names.
+            </summary>
+            <param name="mediaType">The media type.</param>
+            <param name="sampleDirection">The <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.</param>
+            <param name="controllerName">Name of the controller.</param>
+            <param name="actionName">Name of the action.</param>
+            <param name="parameterNames">The parameter names.</param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.ControllerName">
+            <summary>
+            Gets the name of the controller.
+            </summary>
+            <value>
+            The name of the controller.
+            </value>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.ActionName">
+            <summary>
+            Gets the name of the action.
+            </summary>
+            <value>
+            The name of the action.
+            </value>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.MediaType">
+            <summary>
+            Gets the media type.
+            </summary>
+            <value>
+            The media type.
+            </value>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.ParameterNames">
+            <summary>
+            Gets the parameter names.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.ParameterType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection">
+            <summary>
+            Gets the <see cref="P:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.SampleDirection"/>.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.HelpPageSampleKey.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ImageSample">
+            <summary>
+            This represents an image sample on the help page. There's a display template named ImageSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ImageSample.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.ImageSample"/> class.
+            </summary>
+            <param name="src">The URL of an image.</param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.ImageSample.Src">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ImageSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ImageSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ImageSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample">
+            <summary>
+            This represents an invalid sample on the help page. There's a display template named InvalidSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="errorMessage"></param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample.ErrorMessage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.InvalidSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.ObjectGenerator">
+            <summary>
+            This class will create an object of a given type and populate it with sample data.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.ObjectGenerator.GenerateObject(System.Type)">
+            <summary>
+            Generates an object for a given type. The type needs to be public, have a public default constructor and settable public properties/fields. Currently it supports the following types:
+            Simple types: <see cref="T:System.Int32"/>, <see cref="T:System.String"/>, <see cref="T:System.Enum"/>, <see cref="T:System.DateTime"/>, <see cref="T:System.Uri"/>, etc.
+            Complex types: POCO types.
+            Nullables: <see cref="T:System.Nullable`1"/>.
+            Arrays: arrays of simple types or complex types.
+            Key value pairs: <see cref="T:System.Collections.Generic.KeyValuePair`2"/>
+            Tuples: <see cref="T:System.Tuple`1"/>, <see cref="T:System.Tuple`2"/>, etc
+            Dictionaries: <see cref="T:System.Collections.Generic.IDictionary`2"/> or anything deriving from <see cref="T:System.Collections.Generic.IDictionary`2"/>.
+            Collections: <see cref="T:System.Collections.Generic.IList`1"/>, <see cref="T:System.Collections.Generic.IEnumerable`1"/>, <see cref="T:System.Collections.Generic.ICollection`1"/>, <see cref="T:System.Collections.IList"/>, <see cref="T:System.Collections.IEnumerable"/>, <see cref="T:System.Collections.ICollection"/> or anything deriving from <see cref="T:System.Collections.Generic.ICollection`1"/> or <see cref="T:System.Collections.IList"/>.
+            Queryables: <see cref="T:System.Linq.IQueryable"/>, <see cref="T:System.Linq.IQueryable`1"/>.
+            </summary>
+            <param name="type">The type.</param>
+            <returns>An object of the given type.</returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.SampleDirection">
+            <summary>
+            Indicates whether the sample is used for request or response
+            </summary>
+        </member>
+        <member name="F:Copasa.Atende.WebService.Areas.HelpPage.SampleDirection.Request">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Copasa.Atende.WebService.Areas.HelpPage.SampleDirection.Response">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.TextSample">
+            <summary>
+            This represents a preformatted text sample on the help page. There's a display template named TextSample associated with this class.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.TextSample.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="text"></param>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Areas.HelpPage.TextSample.Text">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.TextSample.Equals(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.TextSample.GetHashCode">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.TextSample.ToString">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider">
+            <summary>
+            A custom <see cref="T:System.Web.Http.Description.IDocumentationProvider"/> that reads the API documentation from an XML documentation file.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider"/> class.
+            </summary>
+            <param name="documentPath">The physical path to XML document.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpControllerDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="controllerDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Web.Http.Controllers.HttpParameterDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="parameterDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetResponseDocumentation(System.Web.Http.Controllers.HttpActionDescriptor)">
+            <summary>
+            
+            </summary>
+            <param name="actionDescriptor"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Reflection.MemberInfo)">
+            <summary>
+            
+            </summary>
+            <param name="member"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Areas.HelpPage.XmlDocumentationProvider.GetDocumentation(System.Type)">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.TelaController">
+            <summary>
+            API's para o serviço de atendimento
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.TelaController.#ctor(Copasa.Atende.Facade.Interfaces.ITelaFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="telaFacade">IClienteFacade.</param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.TelaController.BuscaHelpPorIdTela(Copasa.Atende.WebService.Controllers.TelaController.HelpTelaSend)">
+            <summary>
+            Obter Tela.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.TelaController.HelpTelaSend">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Controllers.TelaController.HelpTelaSend.IdTela">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Controllers.TelaController.HelpTelaSend.LoginUsuario">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Controllers.TelaController.HelpTelaSend.Origem">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.AtendimentoController">
+            <summary>
+            API's para o serviço de atendimento
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.#ctor(Copasa.Atende.Facade.Interfaces.IClienteFacade,Copasa.Atende.Facade.Interfaces.IInformarLeituraFacade,Copasa.Atende.Facade.Interfaces.IReligacaoFacade,Copasa.Atende.Facade.Interfaces.IAtendimentoFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="clienteFacade">IClienteFacade.</param>
+            <param name="informarLeituraFacade">IInformarLeituraFacade</param>
+            <param name="religacaoFacade">IReligacaoFacade</param>
+            <param name="atendimentoFacade">IAtendimentoFacade</param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.getSituacaoSS(Copasa.Atende.Model.TrabPesquisaFaltaAguaSend)">
+            <summary>
+            Verifica situação de serviços solicitados pelo cliente
+            </summary>
+            <param name="entrada">CPF ou CNPJ e empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.getSituacaoSSEndereco(Copasa.Atende.Model.SCN3ISMTSend)">
+            <summary>
+            Verifica falta d'água de um endereço
+            </summary>
+            <param name="entrada">CPF ou CNPJ e empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscarDadosInformarLeitura(Copasa.Atende.Model.SCN5IS01Send)">
+            <summary>
+            Busca Dados para informar Leitura
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.GravarDadosLeitura(Copasa.Atende.Model.SCN5IS03Send)">
+            <summary>
+            Gravar dados informar leitura
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscaDados(Copasa.Atende.Model.SCN4ISRLSend)">
+            <summary>
+            Buscar dados para informar religação de água
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscaDadosParcelamento(Copasa.Atende.Model.SCN4ISCPSend)">
+            <summary>
+            Buscar dados do parcelamento para religar
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscaDadosReligacao(Copasa.Atende.Model.SCN4ISRESend)">
+            <summary>
+            Grava solicitacao religação
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscaReligacao(Copasa.Atende.Model.TrabBuscaReligacaoSend)">
+            <summary>
+            Busca todos os dados sobre religação de água
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.ListaAgenciasAtendimento(Copasa.Atende.Model.SCN6ISAASend)">
+            <summary>
+            Lista agências atendimento
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.getCalendarioFaturamento(Copasa.Atende.Model.SCN6ISDLSend)">
+            <summary>
+            Calendário faturamento(SCN6ISDL)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.getOndePagarConta(Copasa.Atende.Model.SCN7ISOPSend)">
+            <summary>
+            Onde pagar a conta(SCN7ISOP)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.BuscaInformacoesMatricula(Copasa.Atende.Model.SCN4ISCSSend)">
+            <summary>
+            Busca informações de  uma matrícula
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.ListaHidrometros(Copasa.Atende.Model.SCNISPS1Send)">
+            <summary>
+            Lista hidrômetros de uma matrícula(SCNISPS1)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.AtendimentoController.ExibeUnidadeDestino(Copasa.Atende.Model.SCN4CRUNSend)">
+            <summary>
+            Exibe unidade de destino de uma matricula, localidade e bairro (SCN4CRUN)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.BaseApiController">
+            <summary>
+            Classe base para todos os ApiControllers.
+            </summary>
+        </member>
+        <member name="F:Copasa.Atende.WebService.Controllers.BaseApiController._log">
+            <summary>
+            Instancia da classe Log.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.CreateResponseInvalid(Copasa.Atende.Model.Core.BaseResponse)">
+            <summary>
+            Criar Objeto HttpResponseMessage a partir de um BaseResponse Inválido.
+            </summary>
+            <param name="baseResponse">Objeto BaseResponse Inválido.</param>
+            <returns>Objeto HttpResponseMessage.</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.conectarServidorviaViaPost(System.String,Copasa.Atende.Model.Core.BaseModel)">
+            <summary>
+            conectarServidorviaViaPost.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.conectarServidorviaViaPost(System.String,System.String)">
+            <summary>
+            conectarServidorviaViaPost.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.converteQuebraPaginaHtml(Copasa.Atende.Model.Core.BaseModel)">
+            <summary>
+            Converte quebra de linha \n para formato html <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.consisteEntrada(Copasa.Atende.Model.Core.BaseModel)">
+            <summary>
+            Consiste parâmetro de entrada <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.TrataRetornoFacade(System.Object,System.String,Copasa.Atende.Model.Core.BaseModel)">
+            <summary>
+            Trata o baseResponse retornado da camada facade <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.TrataRetornoFacade(System.Object,System.String,Copasa.Atende.Model.Core.BaseModel,System.Boolean)">
+            <summary>
+            Trata o baseResponse retornado da camada facade <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.GetNameCallMethod">
+            <summary>
+            Retorna nome do método anterior <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.GetClassNameCallMethod">
+            <summary>
+            Retorna nome da classe do método anterior <br/>
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.BaseApiController.getLog">
+            <summary>
+            Retorna instancia da classe Log<br/>
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.QuitacaoAnualDebitoController">
+            <summary>
+            QuitacaoAnualDebitoController
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.QuitacaoAnualDebitoController.GerarPdfPost">
+            <summary>
+            Método que gera o PDF da quitação anual de débito
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.SegundaViaFaturaController">
+            <summary>
+            SegundaViaFaturaController
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SegundaViaFaturaController.GerarPdfPost">
+            <summary>
+            Método que gera o PDF da nova certidão negativa de débito
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.CertidaoNegativaCpfController">
+            <summary>
+            CertidaoNegativaCpfController
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.CertidaoNegativaCpfController.GerarPdfPost">
+            <summary>
+            Método que gera o PDF da nova certidão negativa de débito
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.CertidaoNegativaCpfController.TestePdf">
+            <summary>
+            Método temporário para testar geração de PDF
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.ClienteController">
+            <summary>
+            API's para o serviço de cliente
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.#ctor(Copasa.Atende.Facade.Interfaces.IClienteFacade,Copasa.Atende.Facade.Interfaces.IDClienteFacade,Copasa.Atende.Facade.Interfaces.ICertidaoNegativaDebitoFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="clienteFacade">IClienteFacade.</param>
+            <param name="dclienteFacade">IDClienteFacade.</param>
+            <param name="certidaoNegativaDebitoFacade"></param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaIdentificadores(Copasa.Atende.Model.SCN3PCLISend)">
+            <summary>
+            Lista identificadores a partir de um CPF ou CNPJ(SCN3PCLI)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaMatriculas(Copasa.Atende.Model.SCN4ISU1Send)">
+            <summary>
+            Lista matrículas a partir de um CPF ou CNPJ e opcionalmente, identificadores(SCN4ISU1)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e/ou lista de identificadores e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaItentificadores(Copasa.Atende.Model.SCN4ISU1_IdentificadoresSend)">
+            <summary>
+            Lista dados de identificadores(SCN4ISU1)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e/ou lista de identificadores e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaNomvesItentificadores(Copasa.Atende.Model.SCN4ISU1_NomesSend)">
+            <summary>
+            Lista nomes de identificadores(SCN4ISU1)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e/ou lista de identificadores e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.validaCNPJ(Copasa.Atende.Model.TrabValidaCNPJSend)">
+            <summary>
+            Verifica se o cliente de um identificador é pessoa física ou jurídica
+            </summary>
+            <param name="entrada">Identificador</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaHistoricoConsumo(Copasa.Atende.Model.SCN5ISHCSend)">
+            <summary>
+            Lista histórico de consumo de uma matrícula e identificador(SCN5ISHC)
+            </summary>
+            <param name="entrada">Mátricula do imóvel, identificador do cliente e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaMatriculasPorEndereco(Copasa.Atende.Model.SCN3ISMTSend)">
+            <summary>
+            Lista matrículas a partir de um endereço(SCN3ISMT)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e/ou lista de identificadores e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaPontosServicos(Copasa.Atende.Model.SCN3ISPSSend)">
+            <summary>
+            Lista pontos de serviço de esgoto, água, fonte, dedução e medição de esgoto de uma matrícula(SCN3ISPS)
+            </summary>
+            <param name="entrada">Matrícula do imóvel e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.validaUsuario(Copasa.Atende.Model.TrabValidaUsuarioSend)">
+            <summary>
+            Valida Usuário
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.getCertidaoNegativa(Copasa.Atende.Model.SCN6ISCNSend)">
+            <summary>
+            Obtem a certidão negativa de débito a partir de um CPF ou CNPJ(SCN6ISCN)
+            </summary>
+            <param name="entrada">CPF ou CNPJ e empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.ExibirPDFCertidaoNegativa(System.String,System.String)">
+            <summary>
+            Exibe fatura em formato PDF a partir do número
+            </summary>
+            <param name="cpfCnpj">CPF ou CNPJ.</param>
+            <param name="empresa">Empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.Incluir(Copasa.Atende.Model.SCN6ISCESend)">
+            <summary>
+            Modifica o status para envio de fatura por email(SCN6ISCE)
+            </summary>
+            <param name="entrada">Matrícula do imóvel, status a ser atualizado, email e empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.Incluir(Copasa.Atende.Model.SCN4ISACSend)">
+            <summary>
+            Modifica email e telefone(SCN4ISAC)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.alteraVencimento(Copasa.Atende.Model.SCN6ISAVSend)">
+            <summary>
+            Altera vencimento fatura(SCN6ISAV)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.consisteMatrCentralizadora(Copasa.Atende.Model.SCN6ISCCSend)">
+            <summary>
+            Consiste matrícula centralizadora(SCN6ISCC)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.AtualizaSenha(Copasa.Atende.Model.Dyn365ChangeUserPasswordCpfSend)">
+            <summary>
+            Altera a Senha de um Contato no Microsoft Dynamics 365 enviando ContatoId.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.AtualizaUsuario(Copasa.Atende.Model.Dyn365UpdatePortalUserSend)">
+            <summary>
+            Atualiza um Contato no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.AtualizaUsuario(Copasa.Atende.Model.Dyn365ChangeControllerIdentifierStatusSend)">
+            <summary>
+            Altera o Status do [Identificador do Contato] no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.CadastraUsuario(Copasa.Atende.Model.Dyn365CreatePortalUserSend)">
+            <summary>
+            Cria um Contato Novo no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.AutenticaUsuario(Copasa.Atende.Model.Dyn365AuthenticateUserSend)">
+            <summary>
+            Autentica um Contato no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.RecuperaSenha(Copasa.Atende.Model.Dyn365RecoveryUserPasswordSend)">
+            <summary>
+            Gera uma Nova Senha para um Contato no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.listaDadosHidrometro(Copasa.Atende.Model.SCN5IS01Send)">
+            <summary>
+            Lista dados de hidrômetros de uma matrícula
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.obtemQuitacaoAnualDebito(Copasa.Atende.Model.SCN6ISQASend)">
+            <summary>
+            Informa quitação anual de débito(SCN6ISQA)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.ExibirPDFQuitacaoAnualDebito(System.String,System.String,System.String)">
+            <summary>
+            Exibe quitação anual de débito em formato PDF a partir de uma matrícula e ano de referência
+            </summary>
+            <param name="matricula">Matrícula cliente.</param>
+            <param name="anoPesquisa">Ano da pesquisa.</param>
+            <param name="empresa">Empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.ObterInformativo(Copasa.Atende.Model.TrabParametroSend)">
+            <summary>
+            Buscar Mensagem Informativa
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.ClienteController.atualizaBaixaNoDynamics">
+            <summary>
+            Busca baixas de OS no Sicom para atualizar o Dynamics 365.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.DClienteController">
+            <summary>
+            API's para o serviço de cliente do dynamics 365
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.#ctor(Copasa.Atende.Facade.Interfaces.IDClienteFacade,Copasa.Atende.Facade.Interfaces.ICertidaoNegativaDebitoFacade,Copasa.Atende.Facade.Interfaces.IClienteFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor
+            </summary>
+            <param name="dclienteFacade"></param>
+            <param name="certidaoNegativaDebitoFacade"></param>
+            <param name="clienteFacade"></param>
+            <param name="log"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.FaturasPagas(Copasa.Atende.Model.Dyn365.DFaturasSend)">
+            <summary>
+            Consulta faturas pagas de uma matricula/identificador
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.HistoricoConsumo(Copasa.Atende.Model.Dyn365.DFaturasSend)">
+            <summary>
+            Consulta o historico de consumo de uma matricula/identificador
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.EmDebito(Copasa.Atende.Model.Dyn365.DFaturasSend)">
+            <summary>
+            Consulta as faturas em débito de uma matricula/identificador
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.UltimasFaturas(Copasa.Atende.Model.Dyn365.DFaturasSend)">
+            <summary>
+            Exibe as 12 ultimas faturas de um cliente
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaUsuario(Copasa.Atende.Model.Dyn365.DListaUsuarioSend)">
+            <summary>
+            Lista os identificadores e matriculas associadas ao cpf/cnpj
+            </summary>
+            <remarks>
+            Origens: 
+            APP Copasa Atende – APP |
+            PRODEMGE MGAPP - MG |
+            PRODEMGE WebMGAPP – WMG |
+            PRODEMGE Toten – TMG |
+            IMPLY MGAPP – IMP |
+            IMPLY MGAPP Empresarial – IEP |
+            IMPLY WebMGAPP – WIM |
+            IMPLY Toten – TIM |
+            </remarks>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ValidaUsuario(Copasa.Atende.Model.Dyn365.DValidaCpfCnpjSend)">
+            <summary>
+            Verifica se o cpf ou cnpj existe no Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ConsultaUsuario(Copasa.Atende.Model.Dyn365.DValidaCpfCnpjSend)">
+            <summary>
+            Consulta dados de um usuário
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.CriaProtocolo(Copasa.Atende.Model.Dyn365.Protocolo.DCriaProtocoloSend)">
+            <summary>
+            Cria um protocolo base
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ConsultaIdentificador(Copasa.Atende.Model.Dyn365.DConsultaIdentificadorSend)">
+            <summary>
+            Consulta um identificador no Dyn365, 
+            </summary>
+            <param name="entrada">código do identificador</param>
+            <returns>retornando id do identificador</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.CadastraIdentificador(Copasa.Atende.Model.Dyn365.DCadastraIdentificadorSend)">
+            <summary>
+            Cria um Novo Identificador no Microsoft Dynamics 365.
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaIdentificadorDyn365(Copasa.Atende.Model.Dyn365.DListaIdentificadorSend)">
+            <summary>
+            Lista os identificadores associados ao id do cpf/cnpj no D365
+            </summary>
+            <param name="entrada">Id do cpf/cnpj</param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.AssociaIdentificadorDyn365(Copasa.Atende.Model.Dyn365.DAssociaIdentificadorSend)">
+            <summary>
+            Associa um Identificador ao cpf/cnpj no D365
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.DesassociaIdentificador(Copasa.Atende.Model.Dyn365.DDesassociaIdentificadorSend)">
+            <summary>
+             Desassocia um identificador a um cpf/cnpj e um identificador
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.CertidaoNegativa(Copasa.Atende.Model.Dyn365.DCertidaoNegativaSend)">
+            <summary>
+            Retorna a certidão negativa de um usuario
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.CertidaoNegativaPDF(Copasa.Atende.Model.Dyn365.DCertidaoNegativaSend)">
+            <summary>
+            Retorna a certidão negativa de um usuario em formato Pdf
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaLocalidade(Copasa.Atende.Model.Dyn365.Localidade.DLocalidadeSend)">
+            <summary>
+            Retorna a lista de localidades
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaBairro(Copasa.Atende.Model.Dyn365.Localidade.DBairroSend)">
+            <summary>
+            Retorna a lista de bairros de uma localidade
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaLogradouro(Copasa.Atende.Model.Dyn365.Localidade.DLogradouroSend)">
+            <summary>
+            Retorna a lista de logradouros de um bairro
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ValidaEndereco(Copasa.Atende.Model.Dyn365.Localidade.DEnderecoSend)">
+            <summary>
+            Valida Endereço
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ListaPavimentacao(Copasa.Atende.Model.Dyn365.Localidade.DPavimentacaoSend)">
+            <summary>
+            Retorna a lista de Pavimentações de um Subtipo
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.SolicitacaoServico(Copasa.Atende.Model.Dyn365.DSolicitaServicoSend)">
+            <summary>
+            Solicitaçação de serviço
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ContasPorEmail(Copasa.Atende.Model.Dyn365.DContasEmailSend)">
+            <summary>
+            Solicitaçação de serviço
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.ConfirmaContasEmail(System.String,System.String)">
+            <summary>
+            Confirmação de recebimento por email das faturas.
+            </summary>
+            <param name="Protocolo"></param>
+            <param name="Email"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.AlteraContatoUsuario(Copasa.Atende.Model.Broker.UsuarioCopasaModel)">
+            <summary>
+            Atualiza e-mail e telefones do usuário Copasa NO SICOM pelo Broker(SCN4FTE1).
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.DHistoricoConsumoBarra(Copasa.Atende.Model.Dyn365.DFaturasSend)">
+            <summary>
+            Historico de consumo com barras, caso tenha vinculo com faturas em débito
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.DEnviaFaturaEmail(Copasa.Atende.Model.Dyn365.DEnviaFaturaEmailSend)">
+            <summary>
+            Envio de fatura por email
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.DListaStatusFaturaEmail(Copasa.Atende.Model.Dyn365.DListaStatusFaturaSend)">
+            <summary>
+            Lista Status Fatura por Email Alteráveis
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.VerificaFaltaDagua(Copasa.Atende.Model.Dyn365.VerificaFaltaDaguaSend)">
+            <summary>
+            Solicita serviço de falta d'agua ou de cancelamento de acordo com a situação atual
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.GeraProtocolo(Copasa.Atende.Model.Dyn365.Protocolo.GeraProtocoloSend)">
+            <summary>
+            gera um protocolo
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.GetHistoricoServicoDetalhe(Copasa.Atende.Model.Dyn365.Protocolo.DHistoricoServicoDetalheSend)">
+            <summary>
+            Pesquisa por Protocolo
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.GetHistoricoServico(Copasa.Atende.Model.Dyn365.Protocolo.DHistoricoServicoSendApp)">
+            <summary>
+            Historico de serviço
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.GetComentarios(Copasa.Atende.Model.Dyn365.DComentariosSend)">
+            <summary>
+            Recebe os comentarios
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.DClienteController.CriaComentario(Copasa.Atende.Model.Dyn365.DComentariosSend)">
+            <summary>
+            Cria um comentario
+            </summary>
+            <param name="dComentariosSend"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.FaturaController">
+            <summary>
+            API's para o serviço de fatura
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.#ctor(Copasa.Atende.Facade.Interfaces.IFaturaFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="faturaFacade">IFaturaFacade.</param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.listaFaturasEmDebito(Copasa.Atende.Model.SCN6ISFDSend)">
+            <summary>
+            Lista faturas em débito de um determinado cliente(SCN6ISFD)
+            </summary>
+            <param name="entrada">Matrícula do imóvel, identificador do cliente, período inicial(opcional) e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.listaFaturasPagas(Copasa.Atende.Model.SCN6ISFPSend)">
+            <summary>
+            Lista faturas pagas de um determinado cliente(SCN6ISFP)
+            </summary>
+            <param name="entrada">Matrícula do imóvel, identificador do cliente, período de referência(opcional) e empresa.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.detalhaFatura(Copasa.Atende.Model.SCN6ISDFSend)">
+            <summary>
+            Informa detalhes da fatura(SCN6ISDF)
+            </summary>
+            <param name="entrada">Matrícula do imóvel, período de referência e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirCodigoBarras(System.String)">
+            <summary>
+            Exibe imagem do código de barras da fatura 
+            </summary>
+            <param name="numeroCodigoBarras">Número do código de barras.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirQRCode(System.String)">
+            <summary>
+            Exibe imagem do código de barras da fatura 
+            </summary>
+            <param name="numeroCodigoBarras">Número do código de barras.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirFaturaPDF(System.String,System.String)">
+            <summary>
+            Exibe fatura em formato PDF a partir do número
+            </summary>
+            <param name="empresa">Empresa.</param>
+            <param name="numeroFatura">Número da fatura.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.DownloadFaturaPDF(System.String,System.String)">
+            <summary>
+            Download da fatura em formato PDF a partir do número
+            </summary>
+            <param name="empresa">Empresa.</param>
+            <param name="numeroFatura">Número da fatura.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.consultaParcelamentoDebito(Copasa.Atende.Model.SCN6ISPDSend)">
+            <summary>
+            Consulta parcelamento de débito(SCN6ISPD)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.geraParcelamentoDebito(Copasa.Atende.Model.SCN6ISGPSend)">
+            <summary>
+            Gera parcelamento de débito(SCN6ISGP)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.TesteStress1(System.Int32)">
+            <summary>
+            Teste stress chamadas .
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.TesteStress2(System.Int32)">
+            <summary>
+            Teste stress chamadas .
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.TesteStress3(System.Int32)">
+            <summary>
+            Teste stress chamadas .
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.TesteStress4(System.Int32)">
+            <summary>
+            Teste stress chamadas .
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.listaNotaFiscal(Copasa.Atende.Model.SCN6ISNFSend)">
+            <summary>
+            Lista notas fiscais de um fatura(SCN6ISNF)
+            </summary>
+            <param name="entrada">Número da fatura.</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.exibeTarifaProporcional(Copasa.Atende.Model.SCN6ISTPSend)">
+            <summary>
+            Tarifa proporcional(SCN6ISTP)
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.simula(Copasa.Atende.Model.SCN6ISCFSend)">
+            <summary>
+            Simula fatura(SCN6ISCF)
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.HomeController">
+            <summary>
+            Controller Home.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.HomeController.Index">
+            <summary>
+            GET: Index.
+            </summary>
+            <returns>ActionResult</returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.HomeController.ConfirmacaoEmail(System.String,System.String)">
+            <summary>
+            View de resposta à confirmação de email
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController">
+            <summary>
+            API's para o serviços de ordens de serviços
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.#ctor(Copasa.Atende.Facade.Interfaces.IServicoOperacionalFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="servicoOperacionalFacade">IServicoOperacionalFacade.</param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.atualizaAlertaPrioridade(Copasa.Atende.Model.SCN4CRALSend)">
+            <summary>
+            Recebe alertas de prioridade de serviços para atualização(SCN4CRAL)
+            </summary>
+            <param name="entrada">Número da ordem servico, evento, origem, observação do evento, número do protocolo e empresa</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.solicitaOrdemServico(Copasa.Atende.Model.SCN4CRSSSend)">
+            <summary>
+            Solicita abertura de Ordem de serviço(SCN4CRSS)
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.solicitaOrdemServicoAdc(Copasa.Atende.Model.SCN4CREXSend)">
+            <summary>
+            Solicita abertura de Ordem de serviço adicional(SCN4CREX)
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.listaOrdemServico(Copasa.Atende.Model.SCN4ISORSend)">
+            <summary>
+            Lista ordens de serviço de uma solicitação de serviço(SCN4ISOR)
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.listaSolicitacaoServico(Copasa.Atende.Model.SCN4ISSSSend)">
+            <summary>
+            Lista solicitações de serviços de uma matrícula(SCN4ISSS)
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.cancelarOrdemServico(Copasa.Atende.Model.SCN4CASSSend)">
+            <summary>
+            Cancela Solicitação de serviço(SCN4CASS)
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.atualizaBaixaNoDynamics">
+            <summary>
+            Busca baixas de OS no Sicom para atualizar o Dynamics 365.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.AtualizaDynamicsOSGeradas">
+            <summary>
+            Busca baixas de OS no Sicom para atualizar o Dynamics 365.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.SolicitacaoServicoController.GeraAlteracaoEconomias(Copasa.Atende.Model.SCN4ISAESend)">
+            <summary>
+            Gera alteração de economias(SCN4ISAE)
+            </summary>
+            <param name="entrada"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Controllers.URAController">
+            <summary>
+            API's para o serviços disponibilizados para a URA
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.URAController.#ctor(Copasa.Atende.Facade.Interfaces.IURAFacade,Copasa.Atende.Util.ILog)">
+            <summary>
+            Construtor.
+            </summary>
+            <param name="uRAFacade">IURAFacade.</param>
+            <param name="log">ILog</param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.URAController.ListaIdentificador(Copasa.Atende.Model.URAIdentificadorListaSend)">
+            <summary>
+            Lista os identificadores associados ao id do cpf/cnpj no D365
+            </summary>
+            <param name="entrada">cpf/cnpj</param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.URAController.GetHistoricoProtocolo(Copasa.Atende.Model.URAHistoricoProtocoloSend)">
+            <summary>
+            Histórico de protocolo no Dynamics
+            </summary>
+            <param name="entrada">cpf/cnpj</param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.URAController.AtualizaProtocolo(Copasa.Atende.Model.Dyn365ProtocoloURASend)">
+            <summary>
+            Atualiza protocolo no Dynamics
+            </summary>
+            <param name="entrada">cpf/cnpj</param>
+            <returns></returns>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Controllers.URAController.GetHistoricoServicoDetalhe(Copasa.Atende.Model.URAHistoricoProtocoloDetalheSend)">
+            <summary>
+            Pesquisa por Protocolo
+            </summary>
+            <param name="entrada"></param>
+        </member>
+        <member name="T:Copasa.Atende.WebService.WebApiApplication">
+            <summary>
+            WebApiApplication
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.WebApiApplication.Application_Start">
+            <summary>
+            Application_Start
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Mapper.AutoMapperConfiguration">
+            <summary>
+            Classe AutoMapperConfiguration.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Mapper.AutoMapperConfiguration.Configure">
+            <summary>
+            Configurar Automapper.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Mapper.ModelToViewModelMappingProfile">
+            <summary>
+            Classe ModelToViewModelMappingProfile.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Mapper.ModelToViewModelMappingProfile.ProfileName">
+            <summary>
+            Propriedade ProfileName.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Mapper.ModelToViewModelMappingProfile.Configure">
+            <summary>
+            Configurar mapeamento Model para ViewModel.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Mapper.ViewModelToModelMappingProfile">
+            <summary>
+            Classe ViewModelToModelMappingProfile.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Mapper.ViewModelToModelMappingProfile.ProfileName">
+            <summary>
+            Propriedade ProfileName.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Mapper.ViewModelToModelMappingProfile.Configure">
+            <summary>
+            Configurar mapeamento ViewModel para Model.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaDebitoViewModel">
+            <summary>
+            Classe referente aos débitos da certidão negativa
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaDebitoViewModel.numeroFatura">
+            <summary>
+            Número da Fatura.
+            </summary>        
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaDebitoViewModel.valorTotalfatura">
+            <summary>
+            Valor Total da Fatura.
+            </summary>        
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaDebitoViewModel.dataVencimentoFatura">
+            <summary>
+            Data do Vencimento da Fatura.
+            </summary>        
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel">
+            <summary>
+            Classe referente aos endereços da certidão negativa de débito
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.#ctor">
+            <summary>
+            Construtor da classe
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.descricaoTipoLogradouro">
+            <summary>
+            Descrição do tipo de logradouro
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.MatriculaCliente">
+            <summary>
+            Matrícula do cliente
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.CodigoRetorno">
+            <summary>
+            Código de retorno so Sicom
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.IdentificadorCliente">
+            <summary>
+            Identificador do usuário
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.Debitos">
+            <summary>
+            Lista de Débitos.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.Parcelamentos">
+            <summary>
+            Lista de parcelamentos
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.Lancamentos">
+            <summary>
+            Lista de lançamentos
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaEnderecoViewModel.DebitosVencer">
+            <summary>
+            Lista de debitos a vencer
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaFinanciamentoViewModel">
+            <summary>
+            Financiamentos da certidão negativa de débito
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaFinanciamentoViewModel.parcelasFinanciamento">
+            <summary>
+            Quantidade de parcelas de financiamento
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaFinanciamentoViewModel.valorRestanteFinanciamento">
+            <summary>
+            Valor restante do financiamento
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaFinanciamentoViewModel.valorParcelaFinanciamento">
+            <summary>
+            Valor de parcelas do financiamento
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaIdentificadorViewModel">
+            <summary>
+            Classe referente aos identificadores
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Models.CertidaoNegativaIdentificadorViewModel.#ctor">
+            <summary>
+            Construtor da classe
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaIdentificadorViewModel.IdentificadorCliente">
+            <summary>
+            Identificador do usuário
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaIdentificadorViewModel.Enderecos">
+            <summary>
+            Lista dos endereços dos clientes
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel">
+            <summary>
+            Classe referente aos lançamentos da certidão negativa
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.descricaoHistorico">
+            <summary>
+            Descrição do histórico
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.descricaoHistorico1">
+            <summary>
+            Primeira descrição do histórico
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.descricaoHistorico2">
+            <summary>
+            Segunda descrição do histórico
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.dataReferenciaLancamento">
+            <summary>
+            Data de referência do lançamento
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.numeroFatura">
+            <summary>
+            Número da fatura
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.valorLancamento">
+            <summary>
+            Valor de lançamento
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaLancamentoViewModel.dataVencimentoFatura">
+            <summary>
+            Data de Vencimento da fatura
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel">
+            <summary>
+            Classe para a nova certidão negativa de débito
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.#ctor">
+            <summary>
+            Construtor da classe
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.mensagemRetorno">
+            <summary>
+            Mensagem de Retorno.
+            </summary>        
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoCorpo">
+            <summary>
+            Texto Corpo.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.local">
+            <summary>
+            Local.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoDebitos">
+            <summary>
+            Texto Débitos.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoDebitosVencer">
+            <summary>
+            Texto Débitos a Vencer.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoParcelamentos">
+            <summary>
+            Texto Parcelamentos.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoLancamentos">
+            <summary>
+            Texto Lançamentos.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.identificadores">
+            <summary>
+            Lista de matrículas e endereços
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoRodape">
+            <summary>
+            Texto do rodapé da página
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoComplementar">
+            <summary>
+            Texto complementar
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaViewModel.textoComplementar2">
+            <summary>
+            TextoComplementar 2
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.CertidaoNegativaParcelamentoViewModel">
+            <summary>
+            Classe referente aos parcelamentos da certidão negativa
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaParcelamentoViewModel.parcelasParcial">
+            <summary>
+            Quantidade de parcelas
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaParcelamentoViewModel.valorRestanteParcial">
+            <summary>
+            Valor restante do parcelamento
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.CertidaoNegativaParcelamentoViewModel.valorParcelaParcial">
+            <summary>
+            Valor total do parcelamento
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel">
+            <summary>
+            Classe referente às faturas em abeto da quitação anual de débito
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel.numeroFatura">
+            <summary>
+            NumeroFatura.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel.referencia">
+            <summary>
+            Referencia.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel.valor">
+            <summary>
+            Valor.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel.dataVencimento">
+            <summary>
+            DataVencimento.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoFaturaEmAbertoViewModel.endereco">
+            <summary>
+            Endereco.
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel">
+            <summary>
+            Classe referente à quitação anual de débito
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.codigoRetornoSicom">
+            <summary>
+            CodigoRetornoSicom.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.descricaoRetornoSicom">
+            <summary>
+            DescricaoRetornoSicom.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.possuiFaturaEmDebito">
+            <summary>
+            PossuiFaturaEmDebito.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.codigoLogradouro">
+            <summary>
+            CodigoLogradouro.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.tipoLogradouro">
+            <summary>
+            TipoLogradouro.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.nomeLogradouro">
+            <summary>
+            NomeLogradouro.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.numeroImovel">
+            <summary>
+            NumeroImovel.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.tipoComplementoImovel">
+            <summary>
+            TipoComplemento.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.complementoImovel">
+            <summary>
+            ComplementoImovel.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.codigoBairro">
+            <summary>
+            CodigoBairro.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.nomeBairro">
+            <summary>
+            NomeBairro.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.codigoLocalidade">
+            <summary>
+            CodigoLocalidade.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.nomeLocalidade">
+            <summary>
+            NomeLocalidade.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.cepImovel">
+            <summary>
+            CepImovel.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.faturasEmDebito">
+            <summary>
+            DescricaoRetornoSicom.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.textoCorpo">
+            <summary>
+            Texto Corpo.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.textoConsideracoes">
+            <summary>
+            Texto Consideracoes.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.textoDebito">
+            <summary>
+            Texto Debito.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.local">
+            <summary>
+            Local.
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.QuitacaoAnualDebitoViewModel.deferimento">
+            <summary>
+            Deferido ou indeferido
+            </summary>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Models.SegundaViaFaturaViewModel">
+            <summary>
+            Classe para a segunda via de fatura
+            </summary>
+        </member>
+        <member name="P:Copasa.Atende.WebService.Models.SegundaViaFaturaViewModel.mensagemRetorno">
+            <summary>
+            Mensagem de Retorno.
+            </summary>        
+        </member>
+        <member name="T:Copasa.Atende.WebService.Provider.Funcoes">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Provider.Funcoes.#ctor(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="serverMapPath"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Provider.Funcoes.byteArrayToString(System.Byte[])">
+            <summary>
+            
+            </summary>
+            <param name="b"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Copasa.Atende.WebService.Provider.ProviderDeTokensDeAcesso">
+            <summary>
+            Provê o token de acesso.
+            </summary>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Provider.ProviderDeTokensDeAcesso.ValidateClientAuthentication(Microsoft.Owin.Security.OAuth.OAuthValidateClientAuthenticationContext)">
+            <summary>
+            Realiza as validações quando o usuário se autenticar usando o token de acesso gerado;
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Provider.ProviderDeTokensDeAcesso.GrantResourceOwnerCredentials(Microsoft.Owin.Security.OAuth.OAuthGrantResourceOwnerCredentialsContext)">
+            <summary>
+            Recebe um context com as informações passadas pelo usuário.
+            </summary>
+            <param name="context"></param>
+        </member>
+        <member name="M:Copasa.Atende.WebService.Provider.ProviderDeTokensDeAcesso.ValidaLogin(System.String,System.String)">
+            <summary>
+            Validacao de login.
+            ***** Futuramente integracao com o guardian *****
+            </summary>
+            <param name="userName"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

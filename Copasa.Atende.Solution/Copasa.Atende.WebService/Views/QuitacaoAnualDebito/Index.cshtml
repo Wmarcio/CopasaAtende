@@ -1,0 +1,79 @@
+﻿@model Copasa.Atende.Model.SCN6ISQAReceive
+
+@{
+    ViewBag.Title = "Quitação anual de débito";
+    Layout = "~/Views/Shared/_LayoutPDF.cshtml";
+}
+
+<table>
+    <tr class="border-top: no-border">
+        <td class="col-xs-3 col-sm-6">
+            <img src="~/Imagens/COPASA.png" />
+        </td>
+        <td class="col-xs-9 col-sm-6">
+            <h3>Companhia de Saneamento de Minas Gerais</h3>
+        </td>
+    </tr>
+</table>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12 text-center">
+        <h4>DECLARAÇÃO QUITAÇÃO ANUAL DE DÉBITO</h4>
+
+        @if (Model.deferimento != null && !"".Equals(Model.deferimento))
+        {
+            <h4 style="font-weight: bold; color: #dd4b39">@Html.Raw(Model.deferimento)</h4>
+        }
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+        @Html.Raw(Model.textoCorpo)
+    </div>
+</div>
+
+
+@if (!"".Equals(Model.textoDebito))
+{
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+        @Html.Raw(Model.textoDebito)
+        <table class="table table-striped" style="width: 50.00%">
+            <tr>
+                <th style="width: 40.00%">
+                    VENCIMENTO
+                </th>
+                <th style="width: 60.00%">
+                    VALOR
+                </th>
+            </tr>
+            @foreach (var deb in Model.faturasEmDebito)
+            {
+                if (!"".Equals(deb.valor))
+                {
+                    <tr>
+                        <td class="f">
+                            @deb.dataVencimento
+                        </td>
+                        <td class="f">
+                            <text>R$</text>@deb.valor
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div>
+}
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+        @Html.Raw(Model.textoConsideracoes)
+    </div>
+</div>
+
+<div class="row" style="margin-top: 90px">
+    <div class="col-sm-12 text-center">
+        @Html.Raw(Model.local)
+    </div>
+</div>

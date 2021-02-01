@@ -1,0 +1,16 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <soapenv:NOME_PROGRAMA>
+         <inRec/>
+         <soapenv:throwException></soapenv:throwException>
+         <soapenv:logon_userid>IDUSUARIO</soapenv:logon_userid>
+         <soapenv:logon_password>copasa</soapenv:logon_password>
+         <rpc_library>HPSC</rpc_library>
+         <rpc_userid>IDUSUARIO</rpc_userid>
+         <rpc_password>copasa</rpc_password>
+         <server_address></server_address>
+         <_x0024_connectionName></_x0024_connectionName>
+      </soapenv:NOME_PROGRAMA>
+   </soapenv:Body>
+</soapenv:Envelope>

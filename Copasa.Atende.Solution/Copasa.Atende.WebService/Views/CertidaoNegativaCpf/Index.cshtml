@@ -1,0 +1,295 @@
+﻿@model Copasa.Atende.WebService.Models.CertidaoNegativaViewModel
+
+@{
+    ViewBag.Title = "Certidão Negativa de Débito";
+    Layout = "~/Views/Shared/_LayoutPDF.cshtml";
+    var espaco = "     ";
+}
+
+<table>
+    <tr class="border-top: no-border">
+        <td class="col-xs-3 col-sm-6">
+            <img src="~/Imagens/COPASA.png" />
+        </td>
+        <td class="col-xs-9 col-sm-6">
+            <h3>Companhia de Saneamento de Minas Gerais</h3>
+        </td>
+    </tr>
+</table>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12 text-center">
+        <h4>CERTIDÃO NEGATIVA DE DÉBITO</h4>
+
+        @if (Model.mensagemRetorno != null && !"".Equals(Model.mensagemRetorno))
+        {
+            <h4 style="font-weight: bold; color: #dd4b39">@Html.Raw(Model.mensagemRetorno)</h4>
+        }
+
+    </div>
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+        @Html.Raw(Model.textoCorpo)
+    </div>
+</div>
+
+@*Seção que mostra dados caso não existam débitos*@
+<div class="=row" style="margin-top: 20px">
+    @if (Model.mensagemRetorno == null || "".Equals(Model.mensagemRetorno))
+    {
+        <div class="col-sm-12" style="margin-top: 20px">
+            @foreach (var identificador in Model.identificadores)
+            {
+                <text>IDENTIFICADOR:</text> @identificador.IdentificadorCliente
+                <table class="table table-striped">
+                    <tr>
+                        <th>
+                            MATRÍCULA(S)
+                        </th>
+                        <th>
+                            ENDEREÇO
+                        </th>
+                    </tr>
+                    @foreach (var endereco in identificador.Enderecos)
+                    {
+                        <tr>
+                            <td>@endereco.MatriculaCliente</td>
+                            <td>@endereco.descricaoTipoLogradouro</td>
+                        </tr>
+                    }
+                </table>
+            }
+
+        </div>
+    }
+</div>
+
+    @*Seção que mostra os débitos agrupados por endereço*@
+<div class="=row" style="margin-top: 20px">
+    @foreach (var identificador in Model.identificadores)
+    {
+        foreach (var endereco in identificador.Enderecos)
+        {
+            if (endereco.Debitos.Count > 0)
+            {
+                if (Model.identificadores.Count > 1)
+                {
+                    <h4>IDENTIFICADOR: @identificador.IdentificadorCliente @Model.textoDebitos </h4>
+                }
+                else
+                {
+                    <h4> @Model.textoDebitos </h4>
+                }
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 15.00%">
+                            MATRÍCULA
+                        </th>
+                        <th style="width: 60.00%">
+                            ENDEREÇO
+                        </th>
+                        <th style="width: 15.00%">
+                            VENCIMENTO
+                        </th>
+                        <th style="width: 10.00%">
+                            VALOR
+                        </th>
+                    </tr>
+                    <tr>
+                        <td rowspan="@endereco.Debitos.Count">@endereco.MatriculaCliente</td>
+                        <td rowspan="@endereco.Debitos.Count">@endereco.descricaoTipoLogradouro</td>
+
+                        @{
+                            int i = 0;
+                            foreach (var deb in endereco.Debitos)
+                            {
+                                i = i + 1;
+                                if (i > 1)
+                                {
+                                @:</tr><tr>
+                                }
+                                <td class="f">
+                                    @deb.dataVencimentoFatura
+                                </td>
+                                <td class="f">
+                                    <text>R$</text>@deb.valorTotalfatura
+                                </td>
+                            }
+                        }
+                    </tr>
+
+                </table>
+            }
+
+            if (endereco.DebitosVencer.Count > 0)
+            {
+                if (Model.identificadores.Count > 1)
+                {
+                    <h4>IDENTIFICADOR: @identificador.IdentificadorCliente @Model.textoDebitosVencer </h4>
+                }
+                else
+                {
+                    <h4> @Model.textoDebitosVencer </h4>
+                }
+                <table class="table table-striped">
+                    <tr>
+                        <th style="width: 15.00%">
+                            MATRÍCULA
+                        </th>
+                        <th style="width: 60.00%">
+                            ENDEREÇO
+                        </th>
+                        <th style="width: 15.00%">
+                            VENCIMENTO
+                        </th>
+                        <th style="width: 10.00%">
+                            VALOR
+                        </th>
+                    </tr>
+                    <tr>
+                        <td rowspan="@endereco.Debitos.Count">@endereco.MatriculaCliente</td>
+                        <td rowspan="@endereco.Debitos.Count">@endereco.descricaoTipoLogradouro</td>
+
+                        @{
+                            int i = 0;
+                            foreach (var deb in endereco.DebitosVencer)
+                            {
+                                i = i + 1;
+                                if (i > 1)
+                                {
+                                @:</tr><tr>
+                                }
+                                <td class="f">
+                                    @deb.dataVencimentoFatura
+                                </td>
+                                <td class="f">
+                                    <text>R$</text>@deb.valorTotalfatura
+                                </td>
+                            }
+                        }
+                    </tr>
+
+                </table>
+            }
+
+        }
+    }
+</div>
+    
+    @*Seção que exibe todos os parcelamentos*@
+    <div class="=row" style="margin-top: 20px">
+        <b>@Html.Raw(Model.textoParcelamentos)</b> <br />
+        @foreach (var identificador in Model.identificadores)
+        {
+            foreach (var endereco in identificador.Enderecos)
+            {
+                if (endereco.Parcelamentos.Count > 0)
+                {
+                    if (Model.identificadores.Count > 1)
+                    {
+                        <h4>IDENTIFICADOR: @identificador.IdentificadorCliente</h4>
+                    }
+                    <table class="table table-striped">
+                        <tr>
+                            <th style="width: 15.00%">
+                                MATRÍCULA
+                            </th>
+                            <th style="width: 15.00%">
+                                QTDE PARCELAS
+                            </th>
+                            <th style="width: 30.00%">
+                                VLR PARCELA
+                            </th>
+                            <th style="width: 30.00%">
+                                VLR TOTAL PARCELA
+                            </th>
+                        </tr>
+                        <tr>
+                            <td rowspan="@endereco.Parcelamentos.Count">@endereco.MatriculaCliente</td>
+                            @{
+                                int i = 0;
+                                foreach (var par in endereco.Parcelamentos)
+                                {
+                                    i = i + 1;
+                                    if (i > 1)
+                                    {
+                                    @:</tr><tr>
+                                    }
+                                    <td class="f">
+                                        @par.parcelasParcial
+                                    </td>
+                                    <td class="f">
+                                        <text>R$</text>@par.valorParcelaParcial
+                                    </td>
+                                    <td class="f">
+                                        <text>R$</text>@par.valorRestanteParcial
+                                    </td>
+                                }
+                            }
+                        </tr>
+
+                    </table>
+                }
+            }
+        }
+    </div>
+    
+    @*Seção que exibe todos os lançamentos*@
+    <div class="=row" style="margin-top: 20px">
+        <b>@Html.Raw(Model.textoLancamentos)</b> <br />
+        @foreach (var identificador in Model.identificadores)
+        {
+            foreach (var endereco in identificador.Enderecos)
+            {
+                if (endereco.Lancamentos.Count > 0)
+                {
+                    if (Model.identificadores.Count > 1)
+                    {
+                        <h4>IDENTIFICADOR: @identificador.IdentificadorCliente</h4>
+                    }
+                    <div class="col-sm-12" style="margin-top: 20px">
+                        <table class="table table-striped">
+                            <tr>
+                                <th>
+                                    VALOR TOTAL
+                                </th>
+                            </tr>
+                            @foreach (var lan in endereco.Lancamentos)
+                            {
+                                <tr>
+                                    <td>@lan.valorLancamento</td>
+                                </tr>
+                            }
+                        </table>
+                    </div>
+                }
+            }
+        }
+    </div>
+
+<hr />
+<div class="row" style="margin-top: 20px">
+    @if (Model.mensagemRetorno != null && !"".Equals(Model.mensagemRetorno))
+    {
+        <div class="col-sm-12">
+            @Html.Raw(Model.textoComplementar)
+            <p>
+                @Html.Raw(Model.textoComplementar2)
+            </p>
+        </div>
+    }
+</div>
+
+<div class="row" style="margin-top: 20px">
+    <div class="col-sm-12">
+        @Html.Raw(Model.textoRodape)
+    </div>
+</div>
+
+<div class="row" style="margin-top: 90px">
+    <div class="col-sm-12 text-center">
+        @Html.Raw(Model.local)
+    </div>
+</div>

@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A3C5E1B3-DA4D-42D3-8F07-F00DB39CEBBD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Copasa.Atende.Facade</RootNamespace>
+    <AssemblyName>Copasa.Atende.Facade</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Debug\Copasa.App.Facade.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Homologacao|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Homologacao\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>bin\Debug\Copasa.App.Facade.XML</DocumentationFile>
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Hml|AnyCPU'">
+    <OutputPath>bin\Hml\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Prd|AnyCPU'">
+    <OutputPath>bin\Prd\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Dev|AnyCPU'">
+    <OutputPath>bin\Dev\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Tmt|AnyCPU'">
+    <OutputPath>bin\Tmt\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Facades\AtendimentoFacade.cs" />
+    <Compile Include="Facades\CertidaoNegativaDebitoFacade.cs" />
+    <Compile Include="Facades\ClienteFacade.cs" />
+    <Compile Include="Facades\DClienteFacade.cs" />
+    <Compile Include="Facades\FaturaFacade.cs" />
+    <Compile Include="Facades\InformarLeituraFacade.cs" />
+    <Compile Include="Facades\ServicoOperacionalFacade.cs" />
+    <Compile Include="Facades\ReligacaoFacade.cs" />
+    <Compile Include="Facades\TabelasDynamicsFacade.cs" />
+    <Compile Include="Facades\TelaFacade.cs" />
+    <Compile Include="Facades\URAFacade.cs" />
+    <Compile Include="Facades\VazamentoFacade.cs" />
+    <Compile Include="Interfaces\IAtendimentoFacade.cs" />
+    <Compile Include="Interfaces\ICertidaoNegativaDebitoFacade.cs" />
+    <Compile Include="Interfaces\IClienteFacade.cs" />
+    <Compile Include="Interfaces\IDClienteFacade.cs" />
+    <Compile Include="Interfaces\IFaturaFacade.cs" />
+    <Compile Include="Interfaces\IInformarLeituraFacade.cs" />
+    <Compile Include="Interfaces\IReligacaoFacade.cs" />
+    <Compile Include="Interfaces\IServicoOperacionalFacade.cs" />
+    <Compile Include="Interfaces\ITabelasDynamicsFacade.cs" />
+    <Compile Include="Interfaces\IURAFacade.cs" />
+    <Compile Include="Interfaces\IVazamentoFacade.cs" />
+    <Compile Include="Interfaces\ITelaFacade.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Copasa.Atende.Business\Copasa.Atende.Business.csproj">
+      <Project>{b984ad46-4681-4068-bb9a-5888c4006448}</Project>
+      <Name>Copasa.Atende.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Copasa.Atende.Model\Copasa.Atende.Model.csproj">
+      <Project>{0ff5837e-7ef6-4b40-98c6-a62de6e0c215}</Project>
+      <Name>Copasa.Atende.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

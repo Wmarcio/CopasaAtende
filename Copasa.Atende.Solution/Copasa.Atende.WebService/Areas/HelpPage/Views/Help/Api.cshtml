@@ -1,0 +1,16 @@
+@using System.Web.Http
+@using Copasa.Atende.WebService.Areas.HelpPage.Models
+@model HelpPageApiModel
+
+@{
+    var description = Model.ApiDescription;
+    ViewBag.Title = description.HttpMethod.Method + " " + description.RelativePath;
+}
+
+<link type="text/css" href="~/Areas/HelpPage/HelpPage.css" rel="stylesheet" />
+
+<div class="row">
+    <div class="col-sm-12">
+        @Html.DisplayForModel()
+    </div>
+</div>

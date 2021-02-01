@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="JaExiste" xml:space="preserve">
+    <value>O serviço solicitado já existe, seguem abaixo os dados do registro.</value>
+  </data>
+  <data name="MSG_EMAIL_SOLICITACAO" xml:space="preserve">
+    <value>Protocolo aberto para {0}</value>
+  </data>
+  <data name="MSG_NAO_TEM_IDENTIFICADOR" xml:space="preserve">
+    <value>Não existe identificador específico para este CPF ou CNPJ. Dúvidas entrar em contato com o fale conosco.</value>
+  </data>
+  <data name="MSG_UC17_RN04" xml:space="preserve">
+    <value>Foi verificado que seu e-mail está inconsistente e necessita ser confirmado. Por favor, altere seu e-mail e clique em salvar.</value>
+  </data>
+  <data name="MSG_UC01_EX01" xml:space="preserve">
+    <value>Não existe histórico para o mês de referência.</value>
+  </data>
+  <data name="MSG_UC06_EX01" xml:space="preserve">
+    <value>Usuário não encontrado.</value>
+  </data>
+  <data name="MSG_UC06_EX02" xml:space="preserve">
+    <value>Senha incorreta.</value>
+  </data>
+  <data name="MSG_UC06_EX04" xml:space="preserve">
+    <value>CPF ou CNPJ já cadastrado.</value>
+  </data>
+  <data name="MSG_UC06_EX05" xml:space="preserve">
+    <value>Senha enviada com sucesso.</value>
+  </data>
+  <data name="MSG_UC06_EX07" xml:space="preserve">
+    <value>CPF/CNPJ inválido.</value>
+  </data>
+  <data name="MSG_UC07_EX01" xml:space="preserve">
+    <value>Esta área não é uma área coberta pela COPASA.</value>
+  </data>
+  <data name="MSG_UC08_EX01" xml:space="preserve">
+    <value>Vazamento não encontrado.</value>
+  </data>
+  <data name="MSG_UC08_EX03" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta para o cliente. A previsão de solução é dia {0}.</value>
+  </data>
+  <data name="MSG_UC08_EX05" xml:space="preserve">
+    <value>Solicitação gerada com sucesso! A previsão de solução é dia {0}. Protocolo: {1}.</value>
+  </data>
+  <data name="MSG_UC08_EX06" xml:space="preserve">
+    <value>Solicitação gerada com sucesso! Protocolo: {0}.</value>
+  </data>
+  <data name="MSG_UC08_EX07" xml:space="preserve">
+    <value>Não existe este serviço com esta pavimentação na tabela de serviços.</value>
+  </data>
+  <data name="MSG_UC08_EX08" xml:space="preserve">
+    <value>Para este tipo de serviço, não informe pavimentação</value>
+  </data>
+  <data name="MSG_UC08_EX09" xml:space="preserve">
+    <value>Sua solicitação foi encaminhada para a unidade responsável.</value>
+  </data>
+  <data name="MSG_UC08_EX11" xml:space="preserve">
+    <value>A sua solicitação de serviço de Vazamento no Imóvel foi gerada com sucesso!</value>
+  </data>
+  <data name="MSG_UC08_EX12" xml:space="preserve">
+    <value>Os dados desta solicitação foram enviados para o e-mail: {0}.</value>
+  </data>
+  <data name="MSG_UC08_EX13" xml:space="preserve">
+    <value>A sua solicitação de serviço de Vazamento na Rua foi gerada com sucesso!</value>
+  </data>
+  <data name="MSG_UC08_EX14" xml:space="preserve">
+    <value>Endereço inválido.</value>
+  </data>
+  <data name="MSG_UC08_EX15" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta, estamos reiterando o serviço para execução de urgência, pedimos desculpas pelos transtornos.</value>
+  </data>
+  <data name="MSG_UC08_EX17" xml:space="preserve">
+    <value>Não foi possível gerar o vazamento, o endereço não foi localizado em nosso sistema. Gentileza inserir o endereço correto e tentar novamente.</value>
+  </data>
+  <data name="MSG_UC10_EX01" xml:space="preserve">
+    <value>A leitura para este mês já foi informada.</value>
+  </data>
+  <data name="MSG_UC10_EX02" xml:space="preserve">
+    <value>Desistir sem salvar? ___Sim   ___Não </value>
+  </data>
+  <data name="MSG_UC10_EX03" xml:space="preserve">
+    <value>Por favor, preencha todos os campos obrigatórios.</value>
+  </data>
+  <data name="MSG_UC10_EX04" xml:space="preserve">
+    <value>O usuário logado não é titular do identificador selecionado.</value>
+  </data>
+  <data name="MSG_UC10_EX05" xml:space="preserve">
+    <value>Sua leitura está fora da faixa esperada. Continuar a informação de leitura? SIM  NÃO</value>
+  </data>
+  <data name="MSG_UC10_EX06" xml:space="preserve">
+    <value>A informação de leitura é referente à fatura de conta bloqueada do mês {0}. Informe a leitura:</value>
+  </data>
+  <data name="MSG_UC10_EX07" xml:space="preserve">
+    <value>A data para informação da leitura se encontra fora do prazo. O próximo ciclo inicia-se em : {0}.</value>
+  </data>
+  <data name="MSG_UC10_EX08" xml:space="preserve">
+    <value>Você informou a leitura do seu hidrômetro pelo quarto mês consecutivo. Não será possível a informação de leitura. Gentileza dirigir-se a uma de nossas agências de atendimento mais próxima</value>
+  </data>
+  <data name="MSG_UC10_EX09" xml:space="preserve">
+    <value>Já existe leitura para o mês de referência atual.</value>
+  </data>
+  <data name="MSG_UC10_EX010" xml:space="preserve">
+    <value>A informação de leitura para usuários com mais de 20 pontos, deverá ser realizada somente pelo leiturista</value>
+  </data>
+  <data name="MSG_UC10_EX011" xml:space="preserve">
+    <value>A Leitura informada é superior à quantidade de números comportados em seu hidrômetro. Preencha corretamente a informação de leitura.</value>
+  </data>
+  <data name="MSG_UC10_EX12" xml:space="preserve">
+    <value>O imóvel informado não está hidrometrado. </value>
+  </data>
+  <data name="MSG_UC10_EX13" xml:space="preserve">
+    <value>A leitura do hidrômetro foi registrada. Após análise sua conta estará disponível para emissão da segunda via em nosso site e aplicativo.</value>
+  </data>
+  <data name="MSG_UC10_EX14" xml:space="preserve">
+    <value>Sua informação de conta bloqueada ainda está sendo processada e você terá que aguardar novo prazo para a informação da sua leitura. A próxima data para a nova informação de leitura será: {0}</value>
+  </data>
+  <data name="MSG_UC10_EX15" xml:space="preserve">
+    <value>A operação não pode ser concluída. Por favor, tente novamente.</value>
+  </data>
+  <data name="MSG_UC10_EX16" xml:space="preserve">
+    <value>Não é possível informar a leitura. Matrícula migrada para o COPANOR. Favor ligar para o telefone 08000300005.</value>
+  </data>
+  <data name="MSG_UC10_EX17" xml:space="preserve">
+    <value>Não é possível informar a leitura. Serviço inválido para Cliente Centralizador. Favor comparecer a uma Agência de Atendimento da COPASA.</value>
+  </data>
+  <data name="MSG_UC10_EX18" xml:space="preserve">
+    <value>Não é possível informar a leitura, esta ligação encontra-se cortada. Gentileza solicitar a religação.</value>
+  </data>
+  <data name="MSG_UC10_RN10" xml:space="preserve">
+    <value>Informação de Leitura registrada com sucesso! </value>
+  </data>
+  <data name="MSG_UC10_RN11" xml:space="preserve">
+    <value>Não é possível informar leitura pelo quarto mês consecutivo. </value>
+  </data>
+  <data name="MSG_UC12_EX01" xml:space="preserve">
+    <value>Identificador inválido.</value>
+  </data>
+  <data name="MSG_UC12_EX02" xml:space="preserve">
+    <value>O(s) seguinte(s) identificador(es) foi(ram) {0}{1}.</value>
+  </data>
+  <data name="MSG_UC13_EX01" xml:space="preserve">
+    <value>A Copasa está efetuando manutenção na rede de abastecimento na sua região e a previsão de solução é dia {0} às {1}. Foi gerado número de protocolo para o acompanhamento: {2}. Agradecemos pela compreensão.</value>
+  </data>
+  <data name="MSG_UC13_EX02" xml:space="preserve">
+    <value>Solicitação gerada com sucesso! O número do protocolo para acompanhamento é: {0} para a matrícula {1} no endereço {2}.</value>
+  </data>
+  <data name="MSG_UC13_EX03" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta para o cliente. A previsão de solução é dia {0} até {1}.</value>
+  </data>
+  <data name="MSG_UC13_EX04" xml:space="preserve">
+    <value>A sua solicitação de serviço de Estou sem Água gerada com sucesso!</value>
+  </data>
+  <data name="MSG_UC13_EX05" xml:space="preserve">
+    <value>Os dados desta solicitação foram enviados para o e-mail: {0}.</value>
+  </data>
+  <data name="MSG_UC13_EX06" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta para o cliente. A previsão de solução é dia {0}.</value>
+  </data>
+  <data name="MSG_UC13_EX07" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta, estamos reiterando o serviço para execução de urgência, pedimos desculpas pelos transtornos.</value>
+  </data>
+  <data name="MSG_UC14_EX01" xml:space="preserve">
+    <value>A data limite para atendimento era {0}, estamos reiterando o serviço para execução de urgência, pedimos desculpas pelos transtornos.</value>
+  </data>
+  <data name="MSG_UC14_EX02" xml:space="preserve">
+    <value>Para consultar serviços abertos para o seu CPF ou CNPJ, você deverá estar logado.</value>
+  </data>
+  <data name="MSG_UC14_EX03" xml:space="preserve">
+    <value>Logradouro inexistente. Gentileza conferir e refazer pesquisa!</value>
+  </data>
+  <data name="MSG_UC14_EX04" xml:space="preserve">
+    <value>Número de protocolo inexistente. Por favor confira.</value>
+  </data>
+  <data name="MSG_UC14_EX05" xml:space="preserve">
+    <value>Não existe serviço pendente para o usuário logado.</value>
+  </data>
+  <data name="MSG_UC14_EX07" xml:space="preserve">
+    <value>O serviço solicitado ainda não tem data programada para execução. Acabamos de enviar um email requisitando a previsão para o atendimento e a inserção da data de execução será registrada em até 24h, contudo ratificamos que a data limite de atendimento é para {0}.</value>
+  </data>
+  <data name="MSG_UC14_EX08" xml:space="preserve">
+    <value>Este serviço foi executado no dia {0}.</value>
+  </data>
+  <data name="MSG_UC14_EX09" xml:space="preserve">
+    <value>Este serviço está programado para ser executado até o dia {0}.</value>
+  </data>
+  <data name="MSG_UC14_EX10" xml:space="preserve">
+    <value>Este serviço estava programado para ser executado até o dia {0}, já estamos abrindo uma solicitação de urgência para execução o mais rápido possível. A reprogramação no sistema será registrada em até 24h.</value>
+  </data>
+  <data name="MSG_UC14_EX12" xml:space="preserve">
+    <value>Não existe serviço pendente para esse endereço.</value>
+  </data>
+  <data name="MSG_UC14_EX15" xml:space="preserve">
+    <value>Por favor, preencha o logradouro corretamente.</value>
+  </data>
+  <data name="MSG_UC14_EX18" xml:space="preserve">
+    <value>Por necessidade operacional o serviço foi reprogramado para a data {0} (Data de programação).</value>
+  </data>
+  <data name="MSG_UC14_EX19" xml:space="preserve">
+    <value>Este serviço está sem data de previsão e já estamos abrindo uma solicitação de urgência para execução o mais rápido possível. A reprogramação no sistema será registrada em até 24h.</value>
+  </data>
+  <data name="MSG_UC15_EX10" xml:space="preserve">
+    <value>Senha alterada com sucesso.</value>
+  </data>
+  <data name="MSG_UC15_EX11" xml:space="preserve">
+    <value>A senha atual não corresponde à senha armazenada.</value>
+  </data>
+  <data name="paragrafo" xml:space="preserve">
+    <value>&lt;p style='font-family:arial'&gt;{0}&lt;/p&gt;</value>
+  </data>
+  <data name="Sucesso" xml:space="preserve">
+    <value>O serviço solicitado foi registrado com sucesso, seguem abaixo os dados do registro.</value>
+  </data>
+  <data name="tr" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;&lt;font color='#0267b3'&gt;&lt;b&gt;{0}:&lt;/b&gt;&lt;/font&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="Url" xml:space="preserve">
+    <value>https://www.google.com.br/maps?q={0},{1}&amp;hl=pt-BR</value>
+  </data>
+  <data name="Tabela" xml:space="preserve">
+    <value>&lt;table cellpadding='5' border='1' border-style='ridge' cellspacing='1' style='font-family:arial;font-size:14;'&gt;</value>
+  </data>
+  <data name="trPadrao" xml:space="preserve">
+    <value>&lt;tr&gt;&lt;td&gt;&lt;b&gt;{0}:&lt;/b&gt;&lt;/td&gt;&lt;td&gt;{1}&lt;/td&gt;&lt;/tr&gt;</value>
+  </data>
+  <data name="paragrafoNegrito" xml:space="preserve">
+    <value>&lt;p style='font-family:arial'&gt;&lt;b&gt;{0}&lt;/b&gt;&lt;/p&gt;</value>
+  </data>
+  <data name="MSG_UC08_EX16" xml:space="preserve">
+    <value>O Logradouro {0} não está cadastrado para a Localidade.</value>
+  </data>
+  <data name="MSG_UC14_RN29" xml:space="preserve">
+    <value>O serviço solicitado de {0} foi executado em {1}. Está pendente ainda o serviço de {2} com previsão de atendimento para {3}.</value>
+  </data>
+  <data name="MSG_UC14_RN30" xml:space="preserve">
+    <value>O serviço solicitado de {0} foi executado em {1}. Está pendente ainda o serviço de {2} cuja previsão de atendimento era até {3}. Estamos solicitando urgência para execução do serviço para o mais breve possível.</value>
+  </data>
+  <data name="MSG_UC10_EX19" xml:space="preserve">
+    <value>A informação de sua leitura será registrada e caso seja deferida o mês informado sairá do débito automático e posteriormente gerada nova fatura.</value>
+  </data>
+  <data name="MSG_UC17_RN05" xml:space="preserve">
+    <value>Aguardando retorno do usuário.</value>
+  </data>
+  <data name="MSG_UC17_RN03" xml:space="preserve">
+    <value>Foi verificado que o e-mail do usuário {0} está inativo.</value>
+  </data>
+  <data name="MSG_UC16_EX01" xml:space="preserve">
+    <value>Foi encontrado uma inconsistência na alteração de alguns dados. Entre em contato com a COPASA informando o erro.</value>
+  </data>
+  <data name="MSG_UC17_RN02" xml:space="preserve">
+    <value>Foi verificado que o e-mail do usuário {0} está ativo.</value>
+  </data>
+  <data name="MSG_UC10_RN12" xml:space="preserve">
+    <value>A leitura do hidrômetro foi registrada. Após análise sua conta estará disponível para emissão da segunda via em nosso site e aplicativo.</value>
+  </data>
+  <data name="MSG_UC13_RN09" xml:space="preserve">
+    <value>Já existe uma ordem de serviço aberta para o cliente. A previsão de solução é dia {0} às {1}. Protocolo: {2}.</value>
+  </data>
+  <data name="MSG_UC05_ERR_CADASTRAR" xml:space="preserve">
+    <value>Não foi possível incluir os dados do novo usuário. Por favor tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC05_ERR_CONTATOS" xml:space="preserve">
+    <value>Não foi possível recuperar os contatos do usuário. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC05_ERR_IMOVEIS" xml:space="preserve">
+    <value>Não foi possível recuperar os imóveis. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC05_ERR_RECUPERAR" xml:space="preserve">
+    <value>Não foi possível recuperar os dados do usuário. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC06_AUTENTICAR" xml:space="preserve">
+    <value>Não foi possível autenticar o usuário. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC06_EMAIL" xml:space="preserve">
+    <value>Não foi possível enviar o e-mail. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC06_SENHA" xml:space="preserve">
+    <value>Não foi possível recuperar a senha. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC15_EMAIL" xml:space="preserve">
+    <value>Não foi possível atualizar o status do e-mail. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC15_ERR_ATUALIZACAO" xml:space="preserve">
+    <value>Não foi possível atualizar os dados cadastrais. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC15_SENHA" xml:space="preserve">
+    <value>Não foi possível alterar a senha. Por favor, tente mais tarde.</value>
+  </data>
+  <data name="MSG_ERR_BUSCARCOMPLEMENTO" xml:space="preserve">
+    <value>Não foi possível recuperar os tipos de coplementos. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_ERR_BUSCARCOMUNICACAO" xml:space="preserve">
+    <value>Não foi possível recuperar as comunicações. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_ERR_SALVARCOMUNICACAO" xml:space="preserve">
+    <value>Não foi possível salvar as comunicações. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC01_ERR_HISTORICO" xml:space="preserve">
+    <value>Não foi possível recuperar o histórico de consumo. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC02_ERR_ENVIAREMAIL" xml:space="preserve">
+    <value>Não foi possível enviar a segunda via de conta via e-mail. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC03_ERR_OBTERCONTA" xml:space="preserve">
+    <value>Não foi possível recuperar as informações da conta. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC04_ERR_LISTAIMOVEIS" xml:space="preserve">
+    <value>Não foi possível recuperar a lista de imóveis. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC04_ERR_OBTERCERTIDAO" xml:space="preserve">
+    <value>Não foi possível obter a certidão negativa de débito. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC05_ERR_TELEFONE" xml:space="preserve">
+    <value>Não foi possível salvar o telefone. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC07_ERR_INTERRUPCAO" xml:space="preserve">
+    <value>Não foi possível concluir a solicitação. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC07_ERR_LOCALIDADE" xml:space="preserve">
+    <value>Não foi possível recuperar a lista de localidades. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC07_ERR_PAV" xml:space="preserve">
+    <value>Não foi possível recuperar as pavimentações. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC07_ERR_VAZAMENTO" xml:space="preserve">
+    <value>Não foi possível gerar a solicitação de vazamento na rua, por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC08_ERR_VAZAMENTO" xml:space="preserve">
+    <value>Não foi possível gerar a solicitação de vazamento no imóvel, por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC10_ERR_OBTERDADOS" xml:space="preserve">
+    <value>Não foi possível obter os dados para leitura. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC10_ERR_SALVAR" xml:space="preserve">
+    <value>Não foi possível salvar os dados de leitura. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC12_ERR_ATUALIZAR" xml:space="preserve">
+    <value>Não foi possível atualizar os identificadores. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC12_ERR_EMAIL" xml:space="preserve">
+    <value>Não foi possível enviar o e-mail com a lista de identificadores. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC12_ERR_OBTER" xml:space="preserve">
+    <value>Não foi possível obter a lista dos identificadores. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC12_ERR_SALVAR" xml:space="preserve">
+    <value>Não foi possível salvar os identificadores. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC13_ERR_SOLICITACAO" xml:space="preserve">
+    <value>Não foi possível gerar a solicitação para estou sem agua. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC14_ERR_ACOMP" xml:space="preserve">
+    <value>Não foi possível recuperar o serviço solicitado. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC14_ERR_EMAIL" xml:space="preserve">
+    <value>Não foi possível enviar o e-mail com os detalhes do serviço. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC14_ERR_OBTEROS" xml:space="preserve">
+    <value>Não foi possivel obter a ordem de serviço. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC14_ERR_RECUPERAR" xml:space="preserve">
+    <value>Não foi possível recuperar os detalhes do serviço solicitado. Por favor, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_UC10_EX06_a" xml:space="preserve">
+    <value>A informação de leitura é referente à fatura de conta bloqueada do mês {0}. Será gerada uma nova fatura fora do débito automático.</value>
+  </data>
+  <data name="MSG_COORDENADAS" xml:space="preserve">
+    <value>Não foi possível salvar a coordenada, tente novamente mais tarde.</value>
+  </data>
+  <data name="MSG_USUARIO_EXCLUIDO" xml:space="preserve">
+    <value>O usuário foi excluído corretamente!</value>
+  </data>
+  <data name="MSG_USUARIO_NAO_ENCONTRADO" xml:space="preserve">
+    <value>Não foi possível localizar o usuário informado.</value>
+  </data>
+</root>
