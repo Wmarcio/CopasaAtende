@@ -260,6 +260,30 @@ namespace Copasa.Atende.Model
         public string entreRuas { get; set; }
 
         /// <summary>
+        /// TelefoneURA.
+        /// </summary>
+        [Dyn365Name("copasa_telefoneura")]
+        public string telefoneURA { get; set; }
+
+        /// <summary>
+        /// NomeSolicitante.
+        /// </summary>
+        [Dyn365Name("copasa_nomecompleto")]
+        public string nomeSolicitante { get; set; }
+
+        /// <summary>
+        /// TelefoneSolicitante.
+        /// </summary>
+        [Dyn365Name("copasa_telephone2")]
+        public string telefoneSolicitante { get; set; }
+
+        /// <summary>
+        /// EmailSolicitante.
+        /// </summary>
+        [Dyn365Name("copasa_email")]
+        public string emailSolicitante { get; set; }
+
+        /// <summary>
         /// IdSolicitacaoRelacionadaBind.
         /// </summary>
         [Dyn365Bind("incidents", "copasa_SolicitacaoRelacionadaId")]
@@ -335,13 +359,13 @@ namespace Copasa.Atende.Model
         /// <summary>
         /// CodigoBairro.
         /// </summary>
-        [Dyn365KeyBind("copasa_codigosicom", "copasa_bairroid", "idBairro", "copasa_bairros")]
+        [Dyn365KeyBind("copasa_codigo", "copasa_bairroid", "idBairro", "copasa_bairros")]
         public string codigoBairro { get; set; }
 
         /// <summary>
         /// CodigoLogradouro.
         /// </summary>
-        [Dyn365KeyBind("copasa_codigosicom", "copasa_logradouroid", "idLogradouro", "copasa_logradouros")]
+        [Dyn365KeyBind("copasa_codigo", "copasa_logradouroid", "idLogradouro", "copasa_logradouros")]
         public string codigoLogradouro { get; set; }
 
         /// <summary>

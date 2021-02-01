@@ -122,5 +122,24 @@ namespace Copasa.Atende.Model
         /// </summary>
         public string titulo { get; set; }
 
+        /// <summary>
+        /// TelefoneURA.
+        /// </summary>
+        public string telefoneURA { get; set; }
+
+        /// <summary>
+        /// NomeSolicitante.
+        /// </summary>
+        public string nomeSolicitante { get; set; }
+
+        /// <summary>
+        /// TelefoneSolicitante.
+        /// </summary>
+        public string telefoneSolicitante { get; set; }
+
+        /// <summary>
+        /// EmailSolicitante.
+        /// </summary>
+        public string emailSolicitante { get; set; }
     }
 }
