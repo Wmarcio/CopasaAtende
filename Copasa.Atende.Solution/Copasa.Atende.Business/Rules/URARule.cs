@@ -124,6 +124,7 @@ namespace Copasa.Atende.Business.Rules
         {
             Dyn365ProtocoloURAReceive dyn365ProtocoloURAReceive = new Dyn365ProtocoloURAReceive();
             Dyn365Protocolo dyn365Protocolo = new Dyn365Protocolo();
+            dyn365ProtocoloURASend.tipoComplementoImovel = "";
             if (dyn365Protocolo.setValues(dyn365ProtocoloURASend))
             {
                 IDyn365ProtocoloRepository dyn365ProtocoloRepository = new Dyn365ProtocoloRepository();
