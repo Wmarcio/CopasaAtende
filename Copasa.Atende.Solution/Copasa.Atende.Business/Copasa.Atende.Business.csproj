@@ -126,6 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Core\BaseRule.cs" />
+    <Compile Include="Crc16Rule.cs" />
     <Compile Include="Interfaces\IAtendimentoRule.cs" />
     <Compile Include="Interfaces\ICertidaoNegativaDebitoRule.cs" />
     <Compile Include="Interfaces\IClienteRule.cs" />

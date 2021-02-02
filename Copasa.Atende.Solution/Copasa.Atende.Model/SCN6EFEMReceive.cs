@@ -110,9 +110,15 @@ namespace Copasa.Atende.Model
         public string numeroCodigoBarras { get; set; }
 
         /// <summary>
+        /// ValorTotal.
+        /// </summary>
+        [Broker("valorTotal", 18, "A18")]
+
+        public string valorTotal { get; set; }
+        /// <summary>
         /// Resto.
         /// </summary>
-        [Broker("resto", 18, "A199")]
+        [Broker("resto", 19, "A181")]
         public string resto { get; set; }
     }
 }

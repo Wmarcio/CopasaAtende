@@ -25,6 +25,17 @@
       <List Name="list1">
         <DataSetName>Dados_Reg</DataSetName>
         <ReportItems>
+          <Image Name="image4">
+            <Sizing>Fit</Sizing>
+            <Top>15.02011cm</Top>
+            <Width>1.46243cm</Width>
+            <Source>External</Source>
+            <Style />
+            <ZIndex>315</ZIndex>
+            <Left>17.91058cm</Left>
+            <Height>1.37989cm</Height>
+            <Value>=Fields!urlQRCode.Value</Value>
+          </Image>
           <Textbox Name="textbox324">
             <Top>22.74709cm</Top>
             <Width>9.5cm</Width>
@@ -159,8 +170,8 @@
             <Value>=trim(Fields!mensIgm_1.Value)</Value>
           </Textbox>
           <Textbox Name="textbox322">
-            <Top>15.9cm</Top>
-            <Width>14cm</Width>
+            <Top>15.95291cm</Top>
+            <Width>12.1cm</Width>
             <Style>
               <FontSize>7pt</FontSize>
               <TextAlign>Left</TextAlign>

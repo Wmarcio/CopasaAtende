@@ -20,6 +20,9 @@ namespace Copasa.Atende.WebService.Provider
         private int ponteiroArq;
         private int tamanhoArq = 0;
         private int ponteiroMetadados;
+
+        private string numeroFatura;
+        private string valorFatura;
         List<string> listMetadados=null;
         public StringBuilder sbXmlDados;
         public StringBuilder sbXmlDatasetRelat;
@@ -248,6 +251,14 @@ namespace Copasa.Atende.WebService.Provider
                 //    "192.168.0.41:7010/codigoBarras/Interleaved2of5?codigo=");
                 //    "127.0.0.1:7010/codigoBarras/Interleaved2of5?codigo=");                
             }
+            if ("urlQRCode".Equals(nome))
+            {
+                valor = ConfigurationSettings.AppSettings["servicoCodigoBarras"]+numeroFatura+"/"+valorFatura;
+            }
+            if ("valor".Equals(nome))
+                valorFatura = valor.Trim();
+            if ("numFatura".Equals(nome))
+                numeroFatura = valor.Trim();
             recordL.Add(valor);
         }
 

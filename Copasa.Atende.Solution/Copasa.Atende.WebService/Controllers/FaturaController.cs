@@ -120,17 +120,18 @@ namespace Copasa.Atende.WebService.Controllers
         /// <summary>
         /// Exibe imagem do código de barras da fatura 
         /// </summary>
-        /// <param name="numeroCodigoBarras">Número do código de barras.</param>
-        [Route("exibe/QRCode/{numeroCodigoBarras}")]
+        /// <param name="numeroFatura">Número da fatura.</param>
+        /// <param name="valorFatura">Valor da fatura.</param>
+        [Route("exibe/QRCode/{numeroFatura}/{valorFatura}")]
         [HttpGet]
         //[Authorize]        
         [SwaggerResponse(HttpStatusCode.OK, Description = "Retorno formato jpeg")]
-        public Task<HttpResponseMessage> ExibirQRCode([FromUri] string numeroCodigoBarras)
+        public Task<HttpResponseMessage> ExibirQRCode([FromUri] string numeroFatura,string valorFatura)
         {
             HttpResponseMessage response = new HttpResponseMessage();
             try
             {
-                Stream retorno = _faturaFacade.retornaQRCode();
+                Stream retorno = _faturaFacade.retornaQRCode(numeroFatura, valorFatura);
                 response = new HttpResponseMessage(HttpStatusCode.OK)
                 {
                     Content = new StreamContent(retorno)

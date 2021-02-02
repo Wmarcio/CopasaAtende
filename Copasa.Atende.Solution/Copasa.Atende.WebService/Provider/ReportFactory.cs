@@ -72,7 +72,10 @@ namespace Copasa.Atende.WebService.Provider
                         localReport.Render("PDF", deviceInfo, LocalReportCreateStreamCallback, out warnings);
                        
                     }
-                    catch (Exception e){}
+                    catch (Exception e)
+                    {
+                        string erro = e.Message;
+                    }
                 }
             }
             catch (Exception ){}

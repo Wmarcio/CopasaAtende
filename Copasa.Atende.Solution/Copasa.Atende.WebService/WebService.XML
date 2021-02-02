@@ -1755,11 +1755,12 @@
             </summary>
             <param name="numeroCodigoBarras">Número do código de barras.</param>
         </member>
-        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirQRCode(System.String)">
+        <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirQRCode(System.String,System.String)">
             <summary>
             Exibe imagem do código de barras da fatura 
             </summary>
-            <param name="numeroCodigoBarras">Número do código de barras.</param>
+            <param name="numeroFatura">Número da fatura.</param>
+            <param name="valorFatura">Valor da fatura.</param>
         </member>
         <member name="M:Copasa.Atende.WebService.Controllers.FaturaController.ExibirFaturaPDF(System.String,System.String)">
             <summary>

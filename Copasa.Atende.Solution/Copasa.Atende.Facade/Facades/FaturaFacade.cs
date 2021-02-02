@@ -106,9 +106,9 @@ namespace Copasa.Atende.Facade.Facades
         /// <summary>
         /// Retorna imagem de QRCode.
         /// </summary>
-        public Stream retornaQRCode()
+        public Stream retornaQRCode(string numeroFatura, string valorFatura)
         {
-            return _faturaRule.retornaQRCode();
+            return _faturaRule.retornaQRCode(numeroFatura, valorFatura);
         }
 
         /// <summary>

@@ -12,6 +12,8 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using System.Net;
+using System.Runtime.Remoting.Metadata.W3cXsd2001;
+using System.Text;
 
 namespace Copasa.Atende.Business.Rules
 {
@@ -275,13 +277,82 @@ namespace Copasa.Atende.Business.Rules
             return _codigoBarrasRule.GerarImagemEmMemoria(codigo);
         }
 
+        private string formataValor(string valor)
+        {
+            if (valor == null)
+                valor = "";
+            valor = valor.Trim();
+            string tamanho = "";
+            if (valor.Length == 0)
+                tamanho = "00";
+            else if (valor.Length > 9)
+                tamanho = valor.Length.ToString();
+            else
+                tamanho = "0"+ valor.Length.ToString();
+            return tamanho + valor;
+        }
+
         /// <summary>
         /// Retorna imagem de QRCode.
         /// </summary>
-        public Stream retornaQRCode()
+        public Stream retornaQRCode(string numeroFatura,string valorFatura)
         {
+            StringBuilder texto = new StringBuilder();
+            string gui = "br.gov.bcb.pix";
+            string chaveEnderecamento = "17281106000103";
+            string merchantName = "Copasa";
+            string merchantCity = "Belo Horizonte";
+            string transactionAmount = valorFatura;
+            transactionAmount = transactionAmount.Replace("*", "");
+            transactionAmount = transactionAmount.Replace("R", "");
+            transactionAmount = transactionAmount.Replace("$", "");
+            transactionAmount = transactionAmount.Replace(".", "");
+            transactionAmount = transactionAmount.Replace(",", ".");
+
+            string transactionIdentification;
+            string numeroConvenio = "077911";
+            string somatorioNumeroConvenio = "25";
+            numeroFatura = numeroFatura.Replace(".", "");
+            numeroFatura = numeroFatura.Replace("-", "");
+            transactionIdentification = "REC" + numeroConvenio + somatorioNumeroConvenio + numeroFatura;
+
+            texto.Append("000201");
+            texto.Append("010211");
+
+            int tamanho26 = gui.Length + chaveEnderecamento.Length;
+            texto.Append("26" + tamanho26.ToString());
+            texto.Append("00" + formataValor(gui));
+            texto.Append("01" + formataValor(chaveEnderecamento));
+            texto.Append("52040000");
+            texto.Append("5303986");
+            texto.Append("54" + formataValor(transactionAmount));
+            texto.Append("5802BR");
+            texto.Append("59"+formataValor(merchantName));
+            texto.Append("60"+ formataValor(merchantCity));
+            int tamanho62 = transactionIdentification.Length + 4;
+            texto.Append("6202"+ tamanho62);
+            texto.Append("05"+formataValor(transactionIdentification));
+
+            //string texto = "00020101021126440014br.gov.bcb.pix0122fulano2019@example.com5204000053039865802BR5913FULANO DE TAL6008BRASILIA6304";
+            //string texto2 = "503002080000024400003886030400000000010100";
+
+            /*
+            var retorno = Crc16Ccitt(Encoding.ASCII.GetBytes(texto2)).ToString("X");
+            var CRC16 = GenCrc16(Encoding.ASCII.GetBytes(texto), texto2.Length).ToString("X");
+            string input = texto2;
+            var bytes = HexToBytes(input);
+            Crc16Rule crc16Rule = new Crc16Rule();
+            string hex = crc16Rule.ComputeChecksum(bytes).ToString("x2");
+            var retorno4 = CRCForModbus(texto);
+            */
+            string textoGerado = texto.ToString();
+            string CRC16 = GenCrc16(Encoding.ASCII.GetBytes(textoGerado), textoGerado.Length).ToString("X"); ;
+
+
             QRCodeGenerator qrGenerator = new QRCodeGenerator();
-            QRCodeData qrCodeData = qrGenerator.CreateQrCode("teste",
+
+
+            QRCodeData qrCodeData = qrGenerator.CreateQrCode(textoGerado + CRC16,
             QRCodeGenerator.ECCLevel.Q);
             QRCode qrCode = new QRCode(qrCodeData);
             Bitmap qrCodeImage = qrCode.GetGraphic(20);
@@ -290,6 +361,222 @@ namespace Copasa.Atende.Business.Rules
             long posicao = memoryStream.Position;
             memoryStream.Position = 0;
             return memoryStream;
+
+        }
+
+        private string CalcCRC16(string strInput)
+        {
+            ushort crc = 0x0000;
+            byte[] data = GetBytesFromHexString(strInput);
+            for (int i = 0; i < data.Length; i++)
+            {
+                crc ^= (ushort)(data[i] << 8);
+                for (int j = 0; j < 8; j++)
+                {
+                    if ((crc & 0x8000) > 0)
+                        crc = (ushort)((crc << 1) ^ 0x8005);
+                    else
+                        crc <<= 1;
+                }
+            }
+            return crc.ToString("X4");
+        }
+
+        private Byte[] GetBytesFromHexString(string strInput)
+        {
+            Byte[] bytArOutput = new Byte[] { };
+            if (!string.IsNullOrEmpty(strInput) && strInput.Length % 2 == 0)
+            {
+                SoapHexBinary hexBinary = null;
+                try
+                {
+                    hexBinary = SoapHexBinary.Parse(strInput);
+                    if (hexBinary != null)
+                    {
+                        bytArOutput = hexBinary.Value;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return bytArOutput;
+        }
+
+        private ushort Crc16Ccitt(byte[] bytes)
+        {
+            const ushort poly = 0x1021;
+            ushort[] table = new ushort[256];
+            ushort initialValue = 0x0000;
+            ushort temp, a;
+            ushort crc = initialValue;
+            for (int i = 0; i < table.Length; ++i)
+            {
+                temp = 0;
+                a = (ushort)(i << 8);
+                for (int j = 0; j < 8; ++j)
+                {
+                    if (((temp ^ a) & 0x8000) != 0)
+                        temp = (ushort)((temp << 1) ^ poly);
+                    else
+                        temp <<= 1;
+                    a <<= 1;
+                }
+                table[i] = temp;
+            }
+            for (int i = 0; i < bytes.Length; ++i)
+            {
+                crc = (ushort)((crc << 8) ^ table[((crc >> 8) ^ (0xff & bytes[i]))]);
+            }
+            return crc;
+        }
+
+        private ushort GenCrc16(byte[] c, int nByte)
+        {
+            ushort Polynominal = 0x1021;
+            ushort InitValue = 0x0;
+
+            ushort i, j, index = 0;
+            ushort CRC = InitValue;
+            ushort Remainder, tmp, short_c;
+            for (i = 0; i < nByte; i++)
+            {
+                short_c = (ushort)(0x00ff & (ushort)c[index]);
+                tmp = (ushort)((CRC >> 8) ^ short_c);
+                Remainder = (ushort)(tmp << 8);
+                for (j = 0; j < 8; j++)
+                {
+
+                    if ((Remainder & 0x8000) != 0)
+                    {
+                        Remainder = (ushort)((Remainder << 1) ^ Polynominal);
+                    }
+                    else
+                    {
+                        Remainder = (ushort)(Remainder << 1);
+                    }
+                }
+                CRC = (ushort)((CRC << 8) ^ Remainder);
+                index++;
+            }
+            return CRC;
+        }
+
+
+        // CRC-CCITT (0xFFFF) with poly 0x1021
+        // input (hex string) =  "503002080000024400003886030400000000010100"
+        // result expected (hex string) = "354E"
+        private string CalcCRC162(string strInput)
+        {
+            ushort temp = 0;
+            ushort crc = 0xFFFF;
+            byte[] bytes = GetBytesFromHexString2(strInput);
+            for (int j = 0; j < bytes.Length; j++)
+            {
+                crc = (ushort)(crc ^ bytes[j]);
+                for (int i = 0; i < 8; i++)
+                {
+                    if ((crc & 0x0001) == 1)
+                        crc = (ushort)((crc >> 1) ^ 0x1021);
+                    else
+                        crc >>= 1;
+                }
+            }
+            crc = (ushort)~(uint)crc;
+            temp = crc;
+            crc = (ushort)((crc << 8) | (temp >> 8 & 0xFF));
+            return crc.ToString("X4");
+        }
+
+        private Byte[] GetBytesFromHexString2(string strInput)
+        {
+            Byte[] bytArOutput = new Byte[] { };
+            if (!string.IsNullOrEmpty(strInput) && strInput.Length % 2 == 0)
+            {
+                SoapHexBinary hexBinary = null;
+                try
+                {
+                    hexBinary = SoapHexBinary.Parse(strInput);
+                    if (hexBinary != null)
+                        bytArOutput = hexBinary.Value;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
+            }
+            return bytArOutput;
+        }
+
+        private byte[] HexToBytes(string input)
+        {
+            byte[] result = new byte[input.Length / 2];
+            for (int i = 0; i < result.Length; i++)
+            {
+                Convert.ToByte("", 16);
+                result[i] = Convert.ToByte(input.Substring(2 * i, 2), 16);
+            }
+            return result;
+        }
+
+
+
+
+        private string CRCForModbus(string data)
+        {
+                         // Handle digital conversion
+            string sendBuf = data;
+            string sendnoNull1 = sendBuf.Trim();// Remove spaces before and after the string
+            string sendnoNull2 = sendnoNull1.Replace(" ", "");//Remove spaces in the middle of the string
+            string sendNOComma = sendnoNull2.Replace(',', ' '); //Remove the English comma
+            string sendNOComma1 = sendNOComma.Replace(',', ' '); //Remove Chinese comma
+            string strSendNoComma2 = sendNOComma1.Replace("0x", ""); // Remove 0x
+            string Data = strSendNoComma2.Replace("0X", ""); //Remove 0X
+
+            byte[] crcbuf = strToToHexByte(data);
+
+
+                         // Calculate and fill in the CRC check code
+            Int32 crc = 0xffff;
+            Int32 len = crcbuf.Length;
+            for (Int32 n = 0; n < len; n++)
+            {
+                Byte i;
+                crc = crc ^ crcbuf[n];
+                for (i = 0; i < 8; i++)
+                {
+                    Int32 TT;
+                    TT = crc & 1;
+                    crc = crc >> 1;
+                    crc = crc & 0x7fff;
+                    if (TT == 1)
+                    {
+                        crc = crc ^ 0xa001;
+                    }
+                    crc = crc & 0xffff;
+                }
+            }
+            crc = ((crc & 0xFF) << 8 | (crc >> 8));//High and low byte transposition
+            String CRCString = crc.ToString("X2");
+
+            return (data + CRCString);
+        }
+
+        /// <summary>
+        /// hexadecimal string to byte array
+        /// </summary>
+        /// <param name="hexString">hex string</param>
+        /// <returns> returns a byte array</returns>
+        private Byte[] strToToHexByte(String hexString)
+        {
+            hexString = hexString.Replace(" ", "");
+            if ((hexString.Length % 2) != 0)
+                hexString = hexString.Insert(hexString.Length - 1, 0.ToString());
+            Byte[] returnBytes = new Byte[hexString.Length / 2];
+            for (Int32 i = 0; i < returnBytes.Length; i++)
+                returnBytes[i] = Convert.ToByte(hexString.Substring(i * 2, 2), 16);
+            return returnBytes;
+        }
         }
     }
-}

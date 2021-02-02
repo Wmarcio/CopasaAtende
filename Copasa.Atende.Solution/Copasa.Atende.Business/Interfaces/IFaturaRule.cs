@@ -63,7 +63,7 @@ namespace Copasa.Atende.Business.Interfaces
         /// <summary>
         /// Retorna imagem de QRCode.
         /// </summary>
-        Stream retornaQRCode();
+        Stream retornaQRCode(string numeroFatura, string valorFatura);
 
         /// <summary>
         /// Tarifa proporcional.
